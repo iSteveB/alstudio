@@ -9,15 +9,18 @@ const config: Config = {
   theme: {
     extend: {
       backgroundColor: {
-        crema: '#F3EBE2'
+        crema: '#F4EBE2'
       },
       colors: {
-        crema: '#F3EBE2',
+        crema: '#F4EBE2',
         white: '#FFFFFF',
         moggle: '#312920',
         beaver: '#8C7D69',
         lion: '#BB9A77'
       },
+      borderWidth: {
+        '3': '3px'
+      }
     },
   },
   plugins: [],
