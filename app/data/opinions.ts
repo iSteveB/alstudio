@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 
-export const OPINION = [
+export const OPINIONS = [
     {
         id: uuidv4(),
         text: 'Nous avons partagé des moments forts et uniques en famille. Je me suis sentie mise à l’honneur avec le shooting de grossesse.',

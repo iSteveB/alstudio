@@ -3,11 +3,18 @@ import Button from './components/Button';
 import Link from 'next/link';
 import pic from '../public/images/DSC_0066.webp';
 import pic2 from '../public/images/DSC_0123.webp';
+import Section from './components/Section';
+import Aside from './components/Aside';
+
 import { prata, gabriela, amiko } from './ui/font';
 import { CATEGORIES } from './data/categories';
-import Section from './components/Section';
+import {OPINIONS} from './data/opinions';
 
-export default function Home() {
+const Home = () => {
+
+    const random = Math.floor(Math.random() * 3);
+    console.log(random);
+    
     return (
         <main>
             <Section
@@ -20,17 +27,7 @@ export default function Home() {
                 imgAlt='Shooting'
             />
 
-            <aside className='flex flex-col items-center justify-center w-full h-36 bg-moggle'>
-                <div className='flex flex-col items-end m-auto'>
-                    <q className={`${amiko.className} text-crema`}>
-                        Votre photographie est un enregistrement de votre vie,
-                        pour quiconque voit vraiment
-                    </q>
-                    <span className={`${gabriela.className} text-crema`}>
-                        - Paul Strand -
-                    </span>
-                </div>
-            </aside>
+            <Aside text={'steve'} author='Paul Strand' />
 
             <section className='border-b-3 border-moggle flex flex-col justify-center h-[80vh]'>
                 <div className='flex flex-col items-center m-6'>
@@ -93,3 +90,5 @@ export default function Home() {
         </main>
     );
 }
+
+export default Home;

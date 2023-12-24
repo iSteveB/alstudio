@@ -37,7 +37,7 @@ const Section: React.FC<SectionProps> = ({title, subtitle, buttonText, buttonLin
                     </div>
                 </div>
                 <div className='border-l-4 border-moggle w-1/2'>
-                    <Image className='w-full h-full' src={imgSrc} alt={imgAlt} />
+                    <Image className='w-full h-full' src={imgSrc} alt={imgAlt} priority/>
                 </div>
             </section>
     );
