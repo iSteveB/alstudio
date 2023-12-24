@@ -9,6 +9,7 @@ import Aside from './components/Aside';
 import { prata, gabriela, amiko } from './ui/font';
 import { CATEGORIES } from './data/categories';
 import {OPINIONS} from './data/opinions';
+import React from 'react';
 
 const Home = () => {
 
