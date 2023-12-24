@@ -16,7 +16,7 @@ const Navigation: React.FC<Props> = ({showMenu, tailwindCSS, setShowMenu }) => {
                 className={`${
                     showMenu
                         ? 'fixed top-[162px] left-0 w-full h-full bg-crema flex flex-col justify-start mt-24 items-center gap-10' 
-                        : 'md:flex hidden flex-row bottom-0 items-center gap-6 transition'
+                        : 'lg:flex hidden flex-row bottom-0 items-center gap-6 transition'
                 }`}>
                 <li className='active:scale-110'>
                     <Link href='/'>accueil</Link>

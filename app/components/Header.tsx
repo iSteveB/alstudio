@@ -20,7 +20,7 @@ const Header = () => {
         <header className='flex justify-between items-center w-full py-8 px-16 border-b-3 border-moggle transition'>
             <div>
                 <div className='lg:flex'>
-                    <Navigation showMenu={showMenu} setShowMenu={()=> setshowMenu(!showMenu)}/>
+                    <Navigation showMenu={showMenu} setShowMenu={()=> setshowMenu(false)}/>
                 </div>
                 <div
                     className='lg:hidden block cursor-pointer'
