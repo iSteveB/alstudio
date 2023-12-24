@@ -4,8 +4,7 @@ import Link from 'next/link';
 import pic from '../public/images/DSC_0066.webp';
 import pic2 from '../public/images/DSC_0123.webp';
 import { prata, gabriela, amiko } from './ui/font';
-import { CATEGORIES } from './components/Categorie';
-import Categorie from './components/Categorie';
+import { CATEGORIES } from './data/categories';
 import Section from './components/Section';
 
 export default function Home() {
@@ -45,7 +44,7 @@ export default function Home() {
                     {CATEGORIES.map(({ id, src, alt, href, title }) => {
                         return (
                             <Link
-                                className='flex flex-col items-center gap-2 hover:scale-105 transition-all duration-500 ease-in-out'
+                                className='flex flex-col items-center gap-2 hover:scale-105 transition-all duration-300 ease-in-out'
                                 href={href}
                                 key={id}>
                                 <div className='border-3 border-moggle'>
