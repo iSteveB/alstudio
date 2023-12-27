@@ -32,7 +32,7 @@ const Section: React.FC<SectionProps> = ({title, subtitle, buttonText, buttonLin
                             {subtitle}
                         </h3>
                         <Link href={buttonLink}>
-                            <Button text={buttonText} />
+                            <Button text={buttonText} type='button'/>
                         </Link>
                     </div>
                 </div>

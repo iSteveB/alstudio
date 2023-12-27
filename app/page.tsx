@@ -12,8 +12,7 @@ import {OPINIONS} from './data/opinions';
 
 const Home = () => {
 
-    const random = Math.floor(Math.random() * 3);
-    console.log(random);
+    const randomOpinions = OPINIONS[Math.floor(Math.random() * OPINIONS.length)];   
     
     return (
         <main>
@@ -27,7 +26,7 @@ const Home = () => {
                 imgAlt='Shooting'
             />
 
-            <Aside text={'steve'} author='Paul Strand' />
+            <Aside text={randomOpinions.text} author={randomOpinions.author} />
 
             <section className='border-b-3 border-moggle flex flex-col justify-center h-[80vh]'>
                 <div className='flex flex-col items-center m-6'>
@@ -75,7 +74,7 @@ const Home = () => {
                             Une photographe passionnée.
                         </h3>
                         <Link href='/contact'>
-                            <Button text='Réserver une Séance' />
+                            <Button text='Réserver une Séance' type='button' />
                         </Link>
                     </div>
                 </div>
@@ -90,5 +89,4 @@ const Home = () => {
         </main>
     );
 }
-
 export default Home;

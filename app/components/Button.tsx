@@ -3,12 +3,12 @@ import { gabriela } from '../ui/font';
 
 interface ButtonProps {
     text: string;
-    onClick?: () => void;
+    type: 'button' | 'submit';
 }
 
-const Button: React.FC<ButtonProps> = ({ text, onClick }) => {
+const Button: React.FC<ButtonProps> = ({ text, type }) => {
     return (
-        <button onClick={onClick} className={`${gabriela.className} uppercase bg-beaver hover:bg-crema text-crema hover:text-moggle py-4 px-3 border border-moggle hover:scale-105 transition-all duration-300 ease-in-out`}>
+        <button type={type} className={`${gabriela.className} uppercase bg-beaver hover:bg-crema text-crema hover:text-moggle py-4 px-3 border border-moggle hover:scale-105 transition-all duration-300 ease-in-out`}>
             {text}
         </button>
     );
