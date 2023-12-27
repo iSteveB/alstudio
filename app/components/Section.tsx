@@ -1,45 +1,51 @@
 import React from 'react';
 import Link from 'next/link';
-import Image, { StaticImageData } from 'next/image';
 import Button from './Button';
 
 import { gabriela, prata } from '../ui/font';
-import pic from '../../public/images/DSC_0066.webp';
-
 
 interface SectionProps {
     title: string;
     subtitle: string;
-    buttonText: string;
-    buttonLink: string;
+    text?: JSX.Element | string;
+    buttonText?: string;
+    buttonLink?: string;
     reverse: boolean;
-    imgSrc: StaticImageData;
-    imgAlt: string;
+    children?: React.ReactNode;
 }
 
-const Section: React.FC<SectionProps> = ({title, subtitle, buttonText, buttonLink, reverse, imgSrc, imgAlt}) => {
+const Section: React.FC<SectionProps> = ({
+    title,
+    subtitle,
+    text,
+    buttonText,
+    buttonLink,
+    reverse,
+    children,
+}) => {
     const sectionDirection = reverse ? 'flex-row-reverse' : 'flex-row';
     return (
-        <section className={`flex ${sectionDirection} border-b-3 border-moggle`}>
-                <div className='flex flex-col items-center justify-center w-1/2'>
-                    <div className='w-5/6 flex flex-col gap-6'>
-                        <h2
-                            className={`${gabriela.className} text-lion text-2xl`}>
-                            {title}
-                        </h2>
-                        <h3
-                            className={`${prata.className} text-5xl leading-relaxed`}>
-                            {subtitle}
-                        </h3>
+        <section
+            className={`flex ${sectionDirection} border-b-3 border-moggle`}>
+            <div className='flex flex-col items-center justify-center w-1/2'>
+                <div className='w-5/6 flex flex-col gap-6'>
+                    <h2 className={`${gabriela.className} text-lion text-2xl`}>
+                        {title}
+                    </h2>
+                    <h3
+                        className={`${prata.className} text-5xl leading-relaxed`}>
+                        {subtitle}
+                    </h3>
+                    {buttonText && buttonLink && (
                         <Link href={buttonLink}>
-                            <Button text={buttonText} type='button'/>
+                            <Button text={buttonText} type='button' />
                         </Link>
-                    </div>
+                    )}
+                    {text && <p className='text-moggle'>{text}</p>}
                 </div>
-                <div className='border-l-4 border-moggle w-1/2'>
-                    <Image className='w-full h-full' src={imgSrc} alt={imgAlt} priority/>
-                </div>
-            </section>
+            </div>
+            {children}
+        </section>
     );
 };
 

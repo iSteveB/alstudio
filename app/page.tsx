@@ -8,12 +8,13 @@ import Aside from './components/Aside';
 
 import { prata, gabriela, amiko } from './ui/font';
 import { CATEGORIES } from './data/categories';
-import {OPINIONS} from './data/opinions';
+import { OPINIONS } from './data/opinions';
+import ImageContainer from './components/ImageContainer';
 
 const Home = () => {
+    const randomOpinions =
+        OPINIONS[Math.floor(Math.random() * OPINIONS.length)];
 
-    const randomOpinions = OPINIONS[Math.floor(Math.random() * OPINIONS.length)];   
-    
     return (
         <main>
             <Section
@@ -21,10 +22,9 @@ const Home = () => {
                 subtitle='Capturez vos moments les plus précieux.'
                 buttonText='Réserver une Séance'
                 buttonLink='/contact'
-                reverse={false}
-                imgSrc={pic}
-                imgAlt='Shooting'
-            />
+                reverse={false}>
+                <ImageContainer imgSrc={pic} imgAlt='Shooting' />
+            </Section>
 
             <Aside text={randomOpinions.text} author={randomOpinions.author} />
 
@@ -88,5 +88,5 @@ const Home = () => {
             </section>
         </main>
     );
-}
+};
 export default Home;
