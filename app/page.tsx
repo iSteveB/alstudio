@@ -8,14 +8,13 @@ import Aside from './components/Aside';
 
 import { prata, gabriela, amiko } from './ui/font';
 import { CATEGORIES } from './data/categories';
-import {OPINIONS} from './data/opinions';
-import React from 'react';
+import { OPINIONS } from './data/opinions';
+import ImageContainer from './components/ImageContainer';
 
 const Home = () => {
+    const randomOpinions =
+        OPINIONS[Math.floor(Math.random() * OPINIONS.length)];
 
-    const random = Math.floor(Math.random() * 3);
-    console.log(random);
-    
     return (
         <main>
             <Section
@@ -23,12 +22,11 @@ const Home = () => {
                 subtitle='Capturez vos moments les plus précieux.'
                 buttonText='Réserver une Séance'
                 buttonLink='/contact'
-                reverse={false}
-                imgSrc={pic}
-                imgAlt='Shooting'
-            />
+                reverse={false}>
+                <ImageContainer imgSrc={pic} imgAlt='Shooting' />
+            </Section>
 
-            <Aside text={'steve'} author='Paul Strand' />
+            <Aside text={randomOpinions.text} author={randomOpinions.author} />
 
             <section className='border-b-3 border-moggle flex flex-col justify-center h-[80vh]'>
                 <div className='flex flex-col items-center m-6'>
@@ -76,7 +74,7 @@ const Home = () => {
                             Une photographe passionnée.
                         </h3>
                         <Link href='/contact'>
-                            <Button text='Réserver une Séance' />
+                            <Button text='Réserver une Séance' type='button' />
                         </Link>
                     </div>
                 </div>
@@ -90,6 +88,5 @@ const Home = () => {
             </section>
         </main>
     );
-}
-
+};
 export default Home;

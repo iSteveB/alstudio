@@ -5,31 +5,56 @@ import Link from 'next/link';
 interface Props {
     showMenu?: boolean;
     tailwindCSS?: string;
-    setShowMenu?: ()=> void;
+    setShowMenu?: () => void;
 }
 
-const Navigation: React.FC<Props> = ({showMenu, tailwindCSS, setShowMenu }) => {
+const MENU = [
+    {
+        id: 1,
+        title: 'accueil',
+        href: '/',
+    },
+    {
+        id: 2,
+        title: 'portfolio',
+        href: '/portfolio',
+    },
+    {
+        id: 3,
+        title: 'Prestations',
+        href: '/services',
+    },
+    {
+        id: 4,
+        title: 'réserver',
+        href: '/contact',
+    },
+];
+
+const Navigation: React.FC<Props> = ({
+    showMenu,
+    tailwindCSS,
+    setShowMenu,
+}) => {
     return (
         <nav className={`${gabriela.className} uppercase ${tailwindCSS}`}>
             <ul
                 onClick={setShowMenu}
                 className={`${
                     showMenu
-                        ? 'fixed top-[162px] left-0 w-full h-full bg-crema flex flex-col justify-start mt-24 items-center gap-10' 
+                        ? 'fixed top-[162px] left-0 w-full h-full bg-crema flex flex-col justify-start mt-24 items-center gap-10'
                         : 'lg:flex hidden flex-row bottom-0 items-center gap-6 transition'
                 }`}>
-                <li className='active:scale-110'>
-                    <Link href='/'>accueil</Link>
-                </li>
-                <li className='active:scale-110'>
-                    <Link href='/portfolio'>portfolio</Link>
-                </li>
-                <li className='active:scale-110'>
-                    <Link href='/services'>services</Link>
-                </li>
-                <li className='active:scale-110'>
-                    <Link href='/contact'>réserver</Link>
-                </li>
+                {MENU.map(({ id, title, href }) => {
+                    return (
+                        <li
+                            className='hover:scale-125 duration-300 transition-all ease-in-out'
+                            key={id}
+                            onClick={setShowMenu}>
+                            <Link href={href}>{title}</Link>
+                        </li>
+                    );
+                })}
             </ul>
         </nav>
     );
