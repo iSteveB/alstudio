@@ -17,25 +17,28 @@ const Header = () => {
     };
 
     return (
-        <header className='flex justify-between items-center w-full py-8 px-16 border-b-3 border-moggle transition'>
-            <div>
+        <header className='bg-crema flex justify-between items-center w-full py-8 px-16 border-b-3 border-moggle transition'>
+            <div className=''>
                 <div className='lg:flex'>
-                    <Navigation showMenu={showMenu} setShowMenu={()=> setshowMenu(false)}/>
+                    <Navigation
+                        showMenu={showMenu}
+                        setShowMenu={() => setshowMenu(false)}
+                    />
                 </div>
                 <div
-                    className='lg:hidden block cursor-pointer'
+                    className='lg:hidden block cursor-pointer hover:scale-125 duration-300 transition-all ease-in-out'
                     onClick={toggleMenu}>
-                    {showMenu ? <CloseButton /> :<BurgerMenu /> }
+                    {showMenu ? <CloseButton /> : <BurgerMenu />}
                 </div>
             </div>
-            <div>
+
+            <div className=''>
                 <Logo />
             </div>
-            <div>
-                <SocialNetwork tailwindcss='hidden lg:flex flex-row justify-between gap-10' />
-                <div className='lg:hidden w-10'>
-                    <ChatBubble />
-                </div>
+
+            <div className=''>
+                <SocialNetwork tailwindcss='hidden lg:flex flex-row justify-between gap-20' />
+                <ChatBubble />
             </div>
         </header>
     );

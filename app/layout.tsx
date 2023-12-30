@@ -16,9 +16,12 @@ export default function RootLayout({
 }) {
     return (
         <html className='h-full m-0' lang='en'>
-            <body className={`${amiko.className} bg-crema flex flex-col h-full`}>
-                <Header />
-                <div className='flex-1'>{children}</div>
+            <body
+                className={`${amiko.className} bg-crema flex flex-col h-full`}>
+                <div className='fixed top-0 w-full'>
+                    <Header />
+                </div>
+                <div className='flex-1 mt-[162px]'>{children}</div>
                 <Footer />
             </body>
         </html>
