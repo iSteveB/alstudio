@@ -1,7 +1,6 @@
 import React from 'react';
 import Email from '../ui/svg/Email';
 import Facebook from '../ui/svg/Facebook';
-import SnapChat from '../ui/svg/SnapChat';
 import Instagram from '../ui/svg/Instagram';
 import Tiktok from '../ui/svg/Tiktok';
 import Link from 'next/link';
@@ -13,11 +12,6 @@ interface Props {
 const SocialNetwork: React.FC<Props> = ({ tailwindcss }) => {
     return (
         <div className={`${tailwindcss}`}>
-            <Link
-                className='hover:scale-125 duration-300 transition-all'
-                href=''>
-                <SnapChat />
-            </Link>
             <Link
                 className='hover:scale-125 duration-300 transition-all'
                 href='https://www.facebook.com/rehaussementdecilsbydeborah'>

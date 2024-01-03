@@ -26,14 +26,14 @@ const Section: React.FC<SectionProps> = ({
     const sectionDirection = reverse ? 'flex-row-reverse' : 'flex-row';
     return (
         <section
-            className={`flex ${sectionDirection} border-b-3 border-moggle`}>
-            <div className='flex flex-col items-center justify-center w-1/2'>
-                <div className='w-5/6 flex flex-col gap-6'>
-                    <h2 className={`${gabriela.className} text-lion text-2xl`}>
+            className={`flex ${sectionDirection}  border-b-3 border-moggle flex-wrap`}>
+            <div className='flex flex-col items-center justify-center w-full md:w-1/2'>
+                <div className='w-5/6 flex flex-col items-center md:items-start gap-6 m-10'>
+                    <h2 className={`${gabriela.className} text-lion text-2xl `}>
                         {title}
                     </h2>
                     <h3
-                        className={`${prata.className} text-5xl leading-relaxed`}>
+                        className={`${prata.className} text-5xl leading-relaxed text-center md:text-left`}>
                         {subtitle}
                     </h3>
                     {buttonText && buttonLink && (

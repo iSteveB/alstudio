@@ -2,7 +2,6 @@ import React from 'react';
 import Form from '../components/Form';
 import Section from '../components/Section';
 import Button from '../components/Button';
-import SnapChat from '../ui/svg/SnapChat';
 
 const Contact = () => {
     return (
@@ -23,7 +22,6 @@ const Contact = () => {
                 <Form />
             </Section>
             <section className='flex flex-col gap-5 w-48'>
-                <Button text='Snapchat' type={'button'} img={<SnapChat/>}/>
                 <Button text='Instagram' type={'button'}/>
                 <Button text='TikTok' type={'button'}/>
                 <Button text='Facebook' type={'button'}/>

@@ -8,9 +8,9 @@ interface AsideProps {
 
 const Aside: React.FC<AsideProps> = ({ text, author }) => {
     return (
-        <aside className='flex flex-col items-center justify-center w-full h-36 bg-moggle'>
-            <div className='max-w-2xl'>
-                <div className='flex flex-col items-center w-auto'>
+        <aside className='flex flex-col items-center justify-center w-full min-h-[150px] bg-moggle'>
+            <div className='max-w-3xl'>
+                <div className='flex flex-col items-center w-auto mx-6'>
                     <q className={`${amiko.className} text-crema`}>{text}</q>
                     <span
                         className={`${gabriela.className} text-crema self-end`}>
