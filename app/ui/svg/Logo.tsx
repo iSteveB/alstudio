@@ -1,11 +1,14 @@
 import React from "react";
 
-function Logo() {
+interface Props {
+  tailwindCSS?: string;
+}
+
+const Logo: React.FC<Props> = ({tailwindCSS = "w-[207px] h-[96px]"}) => {
   return (
     <svg
+    className={tailwindCSS}
       xmlns="http://www.w3.org/2000/svg"
-      width="207"
-      height="96"
       fill="none"
       viewBox="0 0 207 96"
     >
