@@ -33,7 +33,7 @@ export const OPINIONS = [
     },
     {
         id: uuidv4(),
-        text: 'Les photos sont magnifiques, Déborah est très patiente et professionnelle. Mon fils a même eu le droit à une séance de "smash the cake".',
+        text: 'Les photos sont magnifiques, Déborah est très patiente et professionnelle. Mon fils a même eu le droit à une séance Smash The Cake.',
         author: 'Andres M.',
     },
     {

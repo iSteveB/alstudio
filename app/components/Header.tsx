@@ -34,7 +34,7 @@ const Header = () => {
     };
 
     return isScrolled ? (
-        <header className='bg-crema flex justify-between items-center w-full py-8 px-16 border-b-3 border-moggle transition-all duration-300 ease-in-out'>
+        <header className='bg-crema flex justify-between items-center w-full py-2 md:px-16 px-8 border-b-3 border-moggle transition-all duration-300 ease-in-out z-50'>
             <div className='lg:flex-grow'>
                 <div className='lg:flex'>
                     <Navigation
@@ -57,7 +57,7 @@ const Header = () => {
             </div>
         </header>
     ) : (
-        <header className='bg-crema flex justify-between items-center w-full py-8 px-16 border-b-3 border-moggle transition-all duration-300 ease-in-out'>
+        <header className='bg-crema flex justify-between items-center w-full py-8 md:px-16 px-8 border-b-3 border-moggle transition-all duration-300 ease-in-out'>
             <div className='lg:flex-grow'>
                 <div className='lg:flex'>
                     <Navigation

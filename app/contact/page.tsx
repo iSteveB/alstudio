@@ -21,10 +21,15 @@ const Contact = () => {
                 reverse={false}>
                 <Form />
             </Section>
-            <section className='flex flex-col gap-5 w-48'>
-                <Button text='Instagram' type={'button'}/>
-                <Button text='TikTok' type={'button'}/>
-                <Button text='Facebook' type={'button'}/>
+            <section className='flex flex-col gap-5 w-48 m-10'>
+                <div>
+                    <Button text='Instagram' type={'button'} />
+                    <Button text='TikTok' type={'button'} />
+                    <Button text='Facebook' type={'button'} />
+                </div>
+                <div>
+                    
+                </div>
             </section>
         </div>
     );

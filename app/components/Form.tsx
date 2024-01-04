@@ -7,10 +7,10 @@ const Form = () => {
     const [booking, setBooking] = useState('');
 
     return (
-        <form className={`${gabriela.className} flex  flex-col items-center`}>
-            <div className='flex flex-col gap-4 m-10'>
-                <div className='flex w-full gap-3'>
-                    <div className='flex-col items-start'>
+        <form className={`${gabriela.className} flex  flex-col items-center m-auto w-5/6`}>
+            <div className='flex flex-col gap-4 mb-10 lg:m-16 w-full md:w-1/2'>
+                <div className='flex flex-col md:flex-row w-full gap-3'>
+                    <div className='flex-col items-start w-full'>
                         <label htmlFor='lastName'>Nom</label>
                         <input
                             className='w-full h-12 py-2 px-3 outline-none border border-lion'
@@ -20,7 +20,7 @@ const Form = () => {
                             required
                         />
                     </div>
-                    <div className='flex-col items-start'>
+                    <div className='flex-col items-start w-full'>
                         <label htmlFor='firstName'>Prénom</label>
                         <input
                             className='w-full h-12 py-2 px-3 outline-none border border-lion'
@@ -106,6 +106,12 @@ const Form = () => {
                                 </option>
                                 <option value='baptem2'>
                                     Baptêmes / Communion 2 - 250€{' '}
+                                </option>
+                                <option value='' disabled>
+                                    -- Autres --
+                                </option>
+                                <option value='others'>
+                                    Décrivez votre souhait ci-dessous
                                 </option>
                             </select>
                         </div>
