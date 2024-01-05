@@ -6,7 +6,7 @@ import GoTopArrow from '../ui/svg/GoTopArrow';
 
 const Footer = () => {
     return (
-        <div className='flex justify-between items-center w-full py-8 px-16 border-t-3 border-moggle '>
+        <div className='flex justify-between items-center w-full py-8 px-16'>
             <div className='flex flex-col items-center'>
                 <Logo />
                 <p className='text-xs'>©2023 AL Studio - All Rights Reserved</p>

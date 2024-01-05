@@ -2,6 +2,7 @@ import React from 'react';
 import Form from '../components/Form';
 import Section from '../components/Section';
 import Button from '../components/Button';
+import { Instagram, Tiktok, Facebook } from '../ui/svg/SocialNetworkIcons';
 
 const Contact = () => {
     return (
@@ -23,7 +24,7 @@ const Contact = () => {
                     <Form />
                 </Section>
             </div>
-            <div className='my-16'>
+            <div className='y-16'>
                 <Section
                     title='Réseaux Sociaux'
                     subtitle='Suivez-moi sur mes réseaux'
@@ -39,10 +40,18 @@ const Contact = () => {
                             de mes prestations.
                         </>
                     }>
-                    <div className='flex flex-col gap-5 m-10 w-1/4'>
-                        <Button text='Instagram' type='button' />
-                        <Button text='TikTok' type='button' />
-                        <Button text='Facebook' type='button' />
+                    <div className='flex flex-col gap-5 m-10 w-full md:w-1/2 md:mx-auto lg:w-1/4'>
+                        <Button
+                            text='Instagram'
+                            type='button'
+                            img={<Instagram color='#F4EBE2' />}
+                        />
+                        <Button text='TikTok' type='button' img={<Tiktok color='#F4EBE2'/>} />
+                        <Button
+                            text='Facebook'
+                            type='button'
+                            img={<Facebook color='#F4EBE2' />}
+                        />
                     </div>
                 </Section>
             </div>

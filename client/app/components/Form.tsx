@@ -8,7 +8,7 @@ const Form = () => {
 
     return (
         <form className={`${gabriela.className} flex  flex-col items-center m-auto w-5/6`}>
-            <div className='flex flex-col gap-4 mb-10 lg:m-16 w-full md:w-1/2'>
+            <div className='flex flex-col gap-4 mb-10 lg:m-16 w-full lg:w-2/3'>
                 <div className='flex flex-col md:flex-row w-full gap-3'>
                     <div className='flex-col items-start w-full'>
                         <label htmlFor='lastName'>Nom</label>
