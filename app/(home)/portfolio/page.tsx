@@ -1,16 +1,16 @@
 import Image, { StaticImageData } from 'next/image';
-import pic1 from '../../public/images/DSC_0066.webp';
-import pic2 from '../../public/images/DSC_0123.webp';
-import pic3 from '../../public/images/DSC_0494.webp';
-import pic4 from '../../public/images/DSC_0131.webp';
-import pic5 from '../../public/images/DSC_0620.webp';
-import pic6 from '../../public/images/DSC_0906.webp';
-import pic7 from '../../public/images/birth.jpg';
-import pic8 from '../../public/images/events.jpg';
-import pic9 from '../../public/images/events.jpg';
-import pic10 from '../../public/images/events.jpg';
-import pic11 from '../../public/images/portrait.jpg';
-import pic12 from '../../public/images/pregnancy.jpg';
+import pic1 from '@/public/images/DSC_0066.webp';
+import pic2 from '@/public/images/DSC_0123.webp';
+import pic3 from '@/public/images/DSC_0494.webp';
+import pic4 from '@/public/images/DSC_0131.webp';
+import pic5 from '@/public/images/DSC_0620.webp';
+import pic6 from '@/public/images/DSC_0906.webp';
+import pic7 from '@/public/images/birth.jpg';
+import pic8 from '@/public/images/events.jpg';
+import pic9 from '@/public/images/events.jpg';
+import pic10 from '@/public/images/events.jpg';
+import pic11 from '@/public/images/portrait.jpg';
+import pic12 from '@/public/images/pregnancy.jpg';
 
 interface ImageData {
     id: number;

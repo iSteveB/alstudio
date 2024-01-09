@@ -1,15 +1,14 @@
 import Image from 'next/image';
-import Button from './components/Button';
 import Link from 'next/link';
-import pic from '../public/images/DSC_0066.webp';
-import pic2 from '../public/images/DSC_0123.webp';
-import Section from './components/Section';
-import Aside from './components/Aside';
+import pic from '@/public/images/DSC_0066.webp';
+import pic2 from '@/public/images/DSC_0123.webp';
+import Section from '../components/Section';
+import Aside from '../components/Aside';
 
-import { prata, gabriela } from './ui/font';
-import { CATEGORIES } from './data/categories';
-import { OPINIONS } from './data/opinions';
-import ImageContainer from './components/ImageContainer';
+import { prata, gabriela } from '../ui/font';
+import { CATEGORIES } from '../data/categories';
+import { OPINIONS } from '../data/opinions';
+import ImageContainer from '../components/ImageContainer';
 
 const Home = () => {
     const randomOpinions =
@@ -23,7 +22,11 @@ const Home = () => {
                 buttonText='Réserver une Séance'
                 buttonLink='/contact'
                 reverse={false}>
-                <ImageContainer imgSrc={pic} imgAlt='Shooting' border='md:border-l-4'/>
+                <ImageContainer
+                    imgSrc={pic}
+                    imgAlt='Shooting'
+                    border='md:border-l-4'
+                />
             </Section>
 
             <Aside text={randomOpinions.text} author={randomOpinions.author} />
@@ -62,12 +65,16 @@ const Home = () => {
                 </div>
             </section>
             <Section
-                title='Derrière l&apos;objectif'
+                title="Derrière l'objectif"
                 subtitle='Une photographe passionnée.'
                 buttonText='Me découvrir'
                 buttonLink='/contact'
                 reverse={true}>
-                <ImageContainer imgSrc={pic2} imgAlt='Déborah' border={'md:border-r-4'}/>
+                <ImageContainer
+                    imgSrc={pic2}
+                    imgAlt='Déborah'
+                    border={'md:border-r-4'}
+                />
             </Section>
         </main>
     );

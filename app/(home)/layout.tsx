@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
-import { amiko } from './ui/font';
-import './globals.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import { amiko } from '../ui/font';
+import '../globals.css';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 export const metadata: Metadata = {
     title: 'AL Studio',

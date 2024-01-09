@@ -1,8 +1,8 @@
 import React from 'react';
-import Form from '../components/Form';
-import Section from '../components/Section';
-import Button from '../components/Button';
-import { Instagram, Tiktok, Facebook } from '../ui/svg/SocialNetworkIcons';
+import Form from '../../components/Form';
+import Section from '../../components/Section';
+import Button from '../../components/Button';
+import { Instagram, Tiktok, Facebook } from '../../ui/svg/SocialNetworkIcons';
 
 const Contact = () => {
     return (
@@ -46,7 +46,11 @@ const Contact = () => {
                             type='button'
                             img={<Instagram color='#F4EBE2' />}
                         />
-                        <Button text='TikTok' type='button' img={<Tiktok color='#F4EBE2'/>} />
+                        <Button
+                            text='TikTok'
+                            type='button'
+                            img={<Tiktok color='#F4EBE2' />}
+                        />
                         <Button
                             text='Facebook'
                             type='button'

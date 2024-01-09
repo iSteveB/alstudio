@@ -7,7 +7,8 @@ const Form = () => {
     const [booking, setBooking] = useState('');
 
     return (
-        <form className={`${gabriela.className} flex  flex-col items-center m-auto w-5/6`}>
+        <form
+            className={`${gabriela.className} flex  flex-col items-center m-auto w-5/6`}>
             <div className='flex flex-col gap-4 mb-10 lg:m-16 w-full lg:w-2/3'>
                 <div className='flex flex-col md:flex-row w-full gap-3'>
                     <div className='flex-col items-start w-full'>
@@ -62,57 +63,58 @@ const Form = () => {
                                 name='packageType'
                                 id='packageType'
                                 required>
-                                <option value=''>Choisir une prestation</option>
-                                <option disabled>-- Enfants --</option>
-                                <option value='newborn'>
-                                    Séance Nouveau-né - 200€
-                                </option>
-                                <option value='child'>
-                                    Séance Grand Enfant - 220€
-                                </option>
-                                <option value='newborn'>
-                                    Séance &quot;Smash The Cake&quot; / Bain de
-                                    lait - 150€
-                                </option>
-                                <option disabled>-- Grossesse --</option>
-                                <option value='pregnancy'>
-                                    Séance Maman Douceur - 250€
-                                </option>
-                                <option value='pregnancy'>
-                                    Séance Maman Détente - 320€
-                                </option>
-                                <option value='pregnancy'>
-                                    Séance Maman Douceur + Séance Nouveau-né -
-                                    550€
-                                </option>
-                                <option disabled>-- Portrait --</option>
-                                <option value='portrait'>
-                                    Portrait seul - 160€
-                                </option>
-                                <option value='portrait'>
-                                    Portrait Groupe - 190€
-                                </option>
-                                <option value='' disabled>
-                                    -- Événements --
-                                </option>
-                                <option value='weeding'>
-                                    Mariage 1 - 550€{' '}
-                                </option>
-                                <option value='weeding'>
-                                    Mariage 2 - 1000€{' '}
-                                </option>
-                                <option value='baptem1'>
-                                    Baptêmes / Communion 1 - 160€{' '}
-                                </option>
-                                <option value='baptem2'>
-                                    Baptêmes / Communion 2 - 250€{' '}
-                                </option>
-                                <option value='' disabled>
-                                    -- Autres --
-                                </option>
-                                <option value='others'>
-                                    Décrivez votre souhait ci-dessous
-                                </option>
+                                <optgroup label='Choisir une prestation'>
+                                    <option disabled>-- Enfants --</option>
+                                    <option value='newborn'>
+                                        Séance Nouveau-né - 200€
+                                    </option>
+                                    <option value='child'>
+                                        Séance Grand Enfant - 220€
+                                    </option>
+                                    <option value='newborn'>
+                                        Séance &quot;Smash The Cake&quot; / Bain
+                                        de lait - 150€
+                                    </option>
+                                    <option disabled>-- Grossesse --</option>
+                                    <option value='pregnancy'>
+                                        Séance Maman Douceur - 250€
+                                    </option>
+                                    <option value='pregnancy'>
+                                        Séance Maman Détente - 320€
+                                    </option>
+                                    <option value='pregnancy'>
+                                        Séance Maman Douceur + Séance Nouveau-né
+                                        - 550€
+                                    </option>
+                                    <option disabled>-- Portrait --</option>
+                                    <option value='portrait'>
+                                        Portrait seul - 160€
+                                    </option>
+                                    <option value='portrait'>
+                                        Portrait Groupe - 190€
+                                    </option>
+                                    <option value='' disabled>
+                                        -- Événements --
+                                    </option>
+                                    <option value='weeding'>
+                                        Mariage 1 - 550€{' '}
+                                    </option>
+                                    <option value='weeding'>
+                                        Mariage 2 - 1000€{' '}
+                                    </option>
+                                    <option value='baptem1'>
+                                        Baptêmes / Communion 1 - 160€{' '}
+                                    </option>
+                                    <option value='baptem2'>
+                                        Baptêmes / Communion 2 - 250€{' '}
+                                    </option>
+                                    <option value='' disabled>
+                                        -- Autres --
+                                    </option>
+                                    <option value='others'>
+                                        Décrivez votre souhait ci-dessous
+                                    </option>
+                                </optgroup>
                             </select>
                         </div>
                     )}
