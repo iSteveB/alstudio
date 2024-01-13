@@ -1,5 +1,5 @@
 import { getPicture } from '@/sanity/sanity.utils';
-import { PictureData } from '../components/ImageGallery';
+import { PictureData } from '@/types/pictureData';
 
 export const fetchPictures = async (): Promise<PictureData[] | undefined> => {
     try {
