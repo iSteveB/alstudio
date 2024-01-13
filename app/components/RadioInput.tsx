@@ -9,7 +9,7 @@ interface RadioInputProps {
 
 const RadioInput: React.FC<RadioInputProps> = ({type, id, label, handleSelectedRadio}) => {
     return (
-        <div className='text-xl flex flex-row-reverse items-center gap-2'>
+        <div className='text-xs md:text-md lg:text-xl flex flex-row-reverse items-center gap-2'>
                     <input
                         type={type}
                         name='pictureType'

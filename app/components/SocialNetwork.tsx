@@ -14,17 +14,20 @@ const SocialNetwork: React.FC<Props> = ({ tailwindcss }) => {
         <div className={`${tailwindcss}`}>
             <Link
                 className='hover:scale-125 duration-300 transition-all'
-                href='https://www.facebook.com/rehaussementdecilsbydeborah'>
+                href='https://www.facebook.com/rehaussementdecilsbydeborah'
+                target='_blank'>
                 <Facebook />
             </Link>
             <Link
                 className='hover:scale-125 duration-300 transition-all'
-                href='https://instagram.com/alstudiophoto?igshid=NGVhN2U2NjQ0Yg=='>
+                href='https://instagram.com/alstudiophoto?igshid=NGVhN2U2NjQ0Yg=='
+                target='_blank'>
                 <Instagram />
             </Link>
             <Link
                 className='hover:scale-125 duration-300 transition-all'
-                href='https://www.tiktok.com/@a.l.studiophotos?_t=8gS9kIGYT8C&_r=1'>
+                href='https://www.tiktok.com/@a.l.studiophotos?_t=8gS9kIGYT8C&_r=1'
+                target='_blank'>
                 <Tiktok />
             </Link>
             <Link

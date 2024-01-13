@@ -5,6 +5,7 @@ export const getPicture = async () => {
         projectId: 't5ng0i6e',
         dataset: 'production',
         apiVersion: '2024-01-09',
+        useCdn: true
     });
 
    return client.fetch(

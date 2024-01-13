@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
-import Facebook from './Facebook';
-import Tiktok from './Tiktok';
-import Instagram from './Instagram';
-import Email from './Email';
+import { links } from '@/app/data/links';
 import Link from 'next/link';
 import { gabriela } from '../font';
 
@@ -38,32 +35,22 @@ function ChatBubble() {
                         : 'lg:flex hidden flex-row bottom-0 items-center gap-6 transition'
                 } `}>
                 <ul className='flex flex-col items-center gap-10'>
-                    <li className='hover:scale-125 duration-300 transition-all ease-in-out'>
-                        <Link href={''} className='flex items-center text-xl gap-2'>
-                                <Facebook />
-                                <span>Facebook</span>
-                        </Link>
-                    </li>
-                    <li className='hover:scale-125 duration-300 transition-all ease-in-out'>
-                        <Link href={''} className='flex items-center text-xl gap-2'>
-                            <Instagram />
-                            <span>Instagram</span>
-                        </Link>
-                    </li>
-                    <li className='hover:scale-125 duration-300 transition-all ease-in-out'>
-                        <Link
-                            href={''}
-                            className='flex flex-row items-center text-xl gap-2'>
-                            <Tiktok />
-                            <span>TikTok</span>
-                        </Link>
-                    </li>
-                    <li className='hover:scale-125 duration-300 transition-all ease-in-out'>
-                        <Link href={''} className='flex items-center text-xl gap-2'>
-                            <Email />
-                            <span>Email</span>
-                        </Link>
-                    </li>
+                    {links.map((link, index) => (
+                        <li
+                            key={index}
+                            className='hover:scale-125 duration-300 transition-all ease-in-out'>
+                            <Link
+                                href={link.href}
+                                onClick={() =>
+                                    setShowSocialNetwork(!showSocialNetwork)
+                                }
+                                target={link.newTab ? '_blank' : '_self'}
+                                className='flex items-center text-xl gap-2'>
+                                {link.icon}
+                                <span>{link.text}</span>
+                            </Link>
+                        </li>
+                    ))}
                 </ul>
             </div>
         </div>

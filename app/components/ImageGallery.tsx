@@ -2,19 +2,7 @@
 import React, { useState, ChangeEvent } from 'react';
 import TagFilter from '@/app/components/TagFilter';
 import Image from 'next/image';
-
-export interface PictureData {
-    _id: number;
-    image: {
-        asset: {
-            url: string;
-            _id: string;
-        };
-        tag: string;
-        alt: string;
-    };
-    title: string;
-}
+import { PictureData } from '@/types/pictureData';
 
 const ImageGallery = ({
     pictures,

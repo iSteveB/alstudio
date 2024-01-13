@@ -5,7 +5,7 @@ import pic2 from '@/public/images/DSC_0123.webp';
 import Section from '../components/Section';
 import Aside from '../components/Aside';
 
-import { prata, gabriela } from '../ui/font';
+import {gabriela } from '../ui/font';
 import { CATEGORIES } from '../data/categories';
 import { OPINIONS } from '../data/opinions';
 import ImageContainer from '../components/ImageContainer';
@@ -72,7 +72,7 @@ const Home = () => {
                 reverse={true}>
                 <ImageContainer
                     imgSrc={pic2}
-                    imgAlt='Déborah'
+                    imgAlt='Déborah Tétéa'
                     border={'md:border-r-4'}
                 />
             </Section>
