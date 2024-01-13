@@ -20,5 +20,5 @@ export const getPicture = async () => {
             }
           }
           `
-    );
+    , {revalidate: 5});
 };

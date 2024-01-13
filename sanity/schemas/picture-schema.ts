@@ -6,19 +6,20 @@ export default defineType({
     title: 'Picture',
     fields: [
         {
-            title: 'Title',
-            name: 'title',
-            type: 'string',
-        },
-        {
             name: 'slug',
             title: 'Slug',
             type: 'slug',
             description: 'This is used to generate the URL for this picture.',
+            validation: (Rule) => Rule.required(),
             options: {
-                source: (doc, context) =>  doc._id,
+                source: (doc, context) => doc._id,
                 maxLength: 96,
             },
+        },
+        {
+            name: 'title',
+            title: 'Title',
+            type: 'string',
         },
         {
             title: 'Image',
@@ -30,18 +31,21 @@ export default defineType({
                 storeOriginalFilename: true,
                 accept: 'image/*',
             },
+            validation: (Rule) => Rule.required(),
             fields: [
                 {
                     name: 'alt',
                     type: 'string',
                     title: 'Alternative text',
                     description: 'Important for SEO and accessiblity.',
+                    validation: (Rule) => Rule.required(),
                 },
                 {
                     type: 'reference',
                     name: 'tag',
                     title: 'Tag',
                     to: [{ type: 'tag' }],
+                    validation: (Rule) => Rule.required(),
                 },
             ],
         },

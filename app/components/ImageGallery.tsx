@@ -45,33 +45,37 @@ const ImageGallery = ({
     };
 
     pictureDistribution();
-    console.log(picturesArrays)
+    console.log(picturesArrays);
 
     return (
         <div>
-            <TagFilter
-                handleSelectedRadio={(event) => handleSelectedRadio(event)}
-            />
+            <div className='w-full'>
+                <TagFilter
+                    handleSelectedRadio={(event) => handleSelectedRadio(event)}
+                />
+            </div>
             <div className='flex justify-center items-center align-middle w-full border-b-3 border-moggle'>
                 <div className='flex flex-wrap'>
-                    {picturesArrays.map((array: PictureData[]) => {
-                        return array.map((picture: PictureData) => {
-                            return (
-                                <div
-                                    key={picture._id}
-                                    className='max-w-[100%] md:max-w-[50%] lg:max-w-[25%] basis-full md:basis-2/4 lg:basis-1/4'>
-                                    <div className='p-2'>
-                                        <Image
-                                            className='object-cover w-full border-3 border-moggle min-w-[300px] min-h-[300px]'
-                                            src={picture.image.asset.url}
-                                            alt={picture.image.alt}
-                                            width={700}
-                                            height={700}
-                                        />
-                                    </div>
-                                </div>
-                            );
-                        });
+                    {picturesArrays.map((array: PictureData[], index) => {
+                        return (
+                            <div
+                                key={index}
+                                className='max-w-[100%] md:max-w-[50%] lg:max-w-[25%] basis-full md:basis-2/4 lg:basis-1/4'>
+                                {array.map((picture: PictureData) => {
+                                    return (
+                                        <div key={picture._id} className='p-2'>
+                                            <Image
+                                                className='object-cover w-full border-3 border-moggle min-w-[300px] min-h-[300px]'
+                                                src={picture.image.asset.url}
+                                                alt={picture.image.alt}
+                                                width={500}
+                                                height={500}
+                                            />
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        );
                     })}
                 </div>
             </div>
