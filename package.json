@@ -10,8 +10,6 @@
   },
   "dependencies": {
     "@sanity/vision": "3.23.4",
-    "@vercel/blob": "^0.17.0",
-    "@vercel/kv": "^1.0.1",
     "next": "14.0.4",
     "next-sanity": "^7.0.7",
     "react": "^18",
