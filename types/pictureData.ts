@@ -1,5 +1,7 @@
 export interface PictureData {
     _id: number;
+    title: string;
+    slug?: string,
     image: {
         asset: {
             url: string;
@@ -8,5 +10,4 @@ export interface PictureData {
         tag: string;
         alt: string;
     };
-    title: string;
 }

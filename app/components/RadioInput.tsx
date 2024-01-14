@@ -9,7 +9,7 @@ interface RadioInputProps {
 
 const RadioInput: React.FC<RadioInputProps> = ({type, id, label, handleSelectedRadio}) => {
     return (
-        <div className='text-xs md:text-md lg:text-xl flex flex-row-reverse items-center gap-2'>
+        <div className='text-xs md:text-lg lg:text-xl flex flex-row-reverse items-center gap-2'>
                     <input
                         type={type}
                         name='pictureType'
@@ -20,7 +20,7 @@ const RadioInput: React.FC<RadioInputProps> = ({type, id, label, handleSelectedR
                     />
                     <label
                         htmlFor={id}
-                        className='peer-checked:bg-crema px-2 py-1 peer-checked:text-moggle hover:cursor-pointer'>
+                        className='peer-checked:bg-crema px-2 py-1 peer-checked:text-moggle hover:cursor-pointer transition duration-500 ease-in-out'>
                         {label}
                     </label>
         </div>

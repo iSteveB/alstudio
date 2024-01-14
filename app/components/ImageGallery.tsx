@@ -3,6 +3,7 @@ import React, { useState, ChangeEvent } from 'react';
 import TagFilter from '@/app/components/TagFilter';
 import Image from 'next/image';
 import { PictureData } from '@/types/pictureData';
+import Link from 'next/link';
 
 const ImageGallery = ({
     pictures,
@@ -52,13 +53,16 @@ const ImageGallery = ({
                                 {array.map((picture: PictureData) => {
                                     return (
                                         <div key={picture._id} className='p-2'>
+                                            <Link href={`/portfolio/${picture.slug}`}>
                                             <Image
-                                                className='object-cover w-full border-3 border-moggle min-w-[300px] min-h-[300px]'
+                                                className='object-cover w-full border-3 border-moggle min-w-[300px] min-h-[300px]
+                                                hover:scale-105 transition duration-500 ease-in-out'
                                                 src={picture.image.asset.url}
                                                 alt={picture.image.alt}
                                                 width={500}
                                                 height={500}
                                             />
+                                            </Link>
                                         </div>
                                     );
                                 })}
