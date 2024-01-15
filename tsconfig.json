@@ -27,7 +27,7 @@
         "**/*.ts",
         "**/*.tsx",
         ".next/types/**/*.ts",
-        "app/(home)/contact",
+        "app/(website)/contact",
         "app/data/categories.ts"
     ],
     "exclude": ["node_modules"]
