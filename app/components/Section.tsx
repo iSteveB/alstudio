@@ -26,14 +26,14 @@ const Section: React.FC<SectionProps> = ({
     const sectionDirection = reverse ? 'flex-row-reverse' : 'flex-row';
     return (
         <section
-            className={`flex ${sectionDirection} border-b-3 border-moggle flex-wrap xl:flex-nowrap items-center`}>
-            <div className='flex flex-col items-center justify-center w-full lg:w-1/2 mx-auto my-10  md:p-0 '>
-                <div className='flex flex-col text-center xl:text-start items-center xl:items-start gap-6 xl:ml-10'>
-                    <h2 className={`${gabriela.className} text-lion text-2xl `}>
+            className={`flex ${sectionDirection} flex-wrap items-center border-b-3 border-moggle xl:flex-nowrap`}>
+            <div className='mx-auto my-10 flex w-full flex-col items-center justify-center md:p-0  lg:w-1/2 '>
+                <div className='flex flex-col items-center gap-6 text-center xl:ml-10 xl:items-start xl:text-start'>
+                    <h2 className={`${gabriela.className} text-2xl text-lion `}>
                         {title}
                     </h2>
                     <h3
-                        className={`${prata.className} text-5xl leading-relaxed text-center xl:text-left`}>
+                        className={`${prata.className} text-center text-5xl leading-relaxed xl:text-left`}>
                         {subtitle}
                     </h3>
                     {buttonText && buttonLink && (
@@ -41,7 +41,7 @@ const Section: React.FC<SectionProps> = ({
                             <Button text={buttonText} type='button' />
                         </Link>
                     )}
-                    {text && <p className='text-moggle text-center xl:text-left px-8 lg:px-0'>{text}</p>}
+                    {text && <p className='px-8 text-center text-moggle lg:px-0 xl:text-left'>{text}</p>}
                 </div>
             </div>
             {children}

@@ -4,27 +4,27 @@ import { gabriela } from '../ui/font';
 import Button from './Button';
 
 const Form = () => {
-    const [booking, setBooking] = useState('');
+    const [booking, setBooking] = useState('book');
 
     return (
         <form
-            className={`${gabriela.className} flex  flex-col items-center m-auto w-5/6`}>
-            <div className='flex flex-col gap-4 mb-10 lg:m-16 w-full lg:w-2/3'>
-                <div className='flex flex-col md:flex-row w-full gap-3'>
-                    <div className='flex-col items-start w-full'>
+            className={`${gabriela.className} m-auto  flex w-5/6 flex-col items-center`}>
+            <div className='mb-10 flex w-full flex-col gap-4 lg:m-16 lg:w-2/3'>
+                <div className='flex w-full flex-col gap-3 md:flex-row'>
+                    <div className='w-full flex-col items-start'>
                         <label htmlFor='lastName'>Nom</label>
                         <input
-                            className='w-full h-12 py-2 px-3 outline-none border border-lion'
+                            className='h-12 w-full border border-lion px-3 py-2 outline-none'
                             type='text'
                             name='lastName'
                             id='lastName'
                             required
                         />
                     </div>
-                    <div className='flex-col items-start w-full'>
+                    <div className='w-full flex-col items-start'>
                         <label htmlFor='firstName'>Prénom</label>
                         <input
-                            className='w-full h-12 py-2 px-3 outline-none border border-lion'
+                            className='h-12 w-full border border-lion px-3 py-2 outline-none'
                             type='text'
                             name='firstName'
                             id='firstName'
@@ -40,26 +40,26 @@ const Form = () => {
                         name='email'
                         id='email'
                         required
-                        className='w-full h-12 py-2 px-3 outline-none border border-lion'
+                        className='h-12 w-full border border-lion px-3 py-2 outline-none'
                     />
                 </div>
 
                 <div>
                     <label htmlFor='object'>Je souhaite </label>
                     <select
-                        className='w-full h-12 py-2 px-3 outline-none border border-lion'
+                        className='h-12 w-full border border-lion px-3 py-2 outline-none'
                         name='object'
                         id='object'
                         onChange={(e) => setBooking(e.target.value)}>
-                        <option value='opinion'>Laisser un avis</option>
                         <option value='book'>Réserver une séance</option>
+                        <option value='opinion'>Laisser un avis</option>
                         <option value='question'>Poser une question</option>
                     </select>
 
                     {booking === 'book' && (
                         <div>
                             <select
-                                className='w-full max-w-full h-12 py-2 px-3 outline-none border border-lion'
+                                className='h-12 w-full max-w-full border border-lion px-3 py-2 outline-none'
                                 name='packageType'
                                 id='packageType'
                                 required>
@@ -122,7 +122,7 @@ const Form = () => {
                 <div>
                     <label htmlFor='message'>Message</label>
                     <textarea
-                        className='w-full py-2 px-3 outline-none border border-lion resize-none'
+                        className='w-full resize-none border border-lion px-3 py-2 outline-none'
                         maxLength={500}
                         name='message'
                         id='message'

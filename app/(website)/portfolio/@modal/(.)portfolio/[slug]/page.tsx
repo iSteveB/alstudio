@@ -13,7 +13,8 @@ export default async function Page({ params }: { params: { slug: string } }) {
                     <Image
                         src={picture[0].image.asset.url}
                         alt={picture[0].image.alt}
-                        fill
+                        height={picture[0].image.asset.metadata.dimensions.height}
+                        width={picture[0].image.asset.metadata.dimensions.width}
                     />
                 </Modal>
             )}

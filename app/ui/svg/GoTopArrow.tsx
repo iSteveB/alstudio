@@ -11,7 +11,7 @@ function Icon() {
 
     return (
         <svg
-        className='w-8 hover:animate-bounce cursor-pointer'
+        className='w-8 cursor-pointer hover:animate-bounce'
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 32 32'
             onClick={goTop}>

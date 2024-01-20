@@ -15,13 +15,13 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html className='h-full m-0' lang='en'>
+        <html className='m-0 h-full' lang='en'>
             <body
-                className={`${amiko.className} bg-crema flex flex-col h-full`}>
+                className={`${amiko.className} flex h-full flex-col bg-crema`}>
                 <div className='fixed top-0 w-full'>
                     <Header />
                 </div>
-                <div className='flex-1 mt-[162px]'>{children}</div>
+                <div className='mt-[162px] flex-1'>{children}</div>
                 <Footer />
             </body>
         </html>

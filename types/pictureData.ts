@@ -4,6 +4,7 @@ export interface PictureData {
     slug?: string,
     image: {
         asset: {
+            metadata: any;
             url: string;
             _id: string;
         };

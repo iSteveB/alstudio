@@ -6,10 +6,10 @@ export const getPictures = async () => {
         projectId: 't5ng0i6e',
         dataset: 'production',
         apiVersion: '2024-01-09',
-        useCdn: true
+        useCdn: true,
     });
 
-   return client.fetch(
+    return client.fetch(
         groq`*[_type == "picture"]{
             _id,
             _createdAt,
@@ -17,12 +17,13 @@ export const getPictures = async () => {
             "slug": slug.current,
             image{
              "tag": tag-> tag,
-             "asset": asset->{url, _id},
+                "asset": asset->{url, _id, metadata},
              alt
             }
           }
-          `
-    , {revalidate: 5});
+          `,
+        { revalidate: 5 }
+    );
 };
 
 export const getPicture = async (slug: string): Promise<PictureData[]> => {
@@ -30,7 +31,7 @@ export const getPicture = async (slug: string): Promise<PictureData[]> => {
         projectId: 't5ng0i6e',
         dataset: 'production',
         apiVersion: '2024-01-09',
-        useCdn: true
+        useCdn: true,
     });
 
     return client.fetch(
@@ -41,10 +42,11 @@ export const getPicture = async (slug: string): Promise<PictureData[]> => {
             "slug": slug.current,
             image{
              "tag": tag-> tag,
-             "asset": asset->{url, _id},
+                "asset": asset->{url, _id, metadata},
              alt
             }
           }
-          `, {slug}
+          `,
+        { slug }
     );
 };

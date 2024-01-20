@@ -8,15 +8,15 @@ type TagFilterProps = {
 const categories = [
     { id: 'all', label: 'Tout voir' },
     { id: 'pregnancy', label: 'Grossesse' },
+    { id: 'child', label: 'Enfant' },
     { id: 'portrait', label: 'Portrait' },
     { id: 'event', label: 'Événement' },
-    { id: 'child', label: 'Enfant' },
 ];
 
 const TagFilter: React.FC<TagFilterProps> = ({ handleSelectedRadio }) => {
     return (
         <div className='w-full bg-moggle'>
-            <aside className='flex items-center justify-around w-5/6 lg:w-1/2 m-auto h-20 text-crema'>
+            <aside className='m-auto flex h-20 w-5/6 items-center justify-around text-crema lg:w-1/2'>
                 {categories.map((category) => {
                     return (
                         <RadioInput

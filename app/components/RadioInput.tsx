@@ -9,18 +9,18 @@ interface RadioInputProps {
 
 const RadioInput: React.FC<RadioInputProps> = ({type, id, label, handleSelectedRadio}) => {
     return (
-        <div className='text-xs md:text-lg lg:text-xl flex flex-row-reverse items-center gap-2'>
+        <div className='flex flex-row-reverse items-center gap-2 text-xs md:text-lg lg:text-xl'>
                     <input
                         type={type}
                         name='pictureType'
                         id={id}
-                        className='hidden peer'
+                        className='peer hidden'
                         defaultChecked={id === 'all'}
                         onChange={handleSelectedRadio}
                     />
                     <label
                         htmlFor={id}
-                        className='peer-checked:bg-crema px-2 py-1 peer-checked:text-moggle hover:cursor-pointer transition duration-500 ease-in-out'>
+                        className='px-2 py-1 transition duration-500 ease-in-out hover:cursor-pointer peer-checked:bg-crema peer-checked:text-moggle'>
                         {label}
                     </label>
         </div>

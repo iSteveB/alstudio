@@ -34,7 +34,6 @@ const ImageGallery = ({
     };
 
     pictureDistribution();
-    console.log(picturesArrays);
 
     return (
         <div>
@@ -43,20 +42,20 @@ const ImageGallery = ({
                     handleSelectedRadio={(event) => handleSelectedRadio(event)}
                 />
             </div>
-            <div className='flex justify-center items-center align-middle w-full border-b-3 border-moggle'>
+            <div className='flex w-full items-center justify-center border-b-3 border-moggle align-middle'>
                 <div className='flex flex-wrap'>
                     {picturesArrays.map((array: PictureData[], index) => {
                         return (
                             <div
                                 key={index}
-                                className='max-w-[100%] md:max-w-[50%] lg:max-w-[25%] basis-full md:basis-2/4 lg:basis-1/4'>
+                                className='max-w-[100%] basis-full md:max-w-[50%] md:basis-2/4 lg:max-w-[25%] lg:basis-1/4'>
                                 {array.map((picture: PictureData) => {
                                     return (
                                         <div key={picture._id} className='p-2'>
                                             <Link href={`/portfolio/${picture.slug}`}>
                                             <Image
-                                                className='object-cover w-full border-3 border-moggle min-w-[300px] min-h-[300px]
-                                                hover:scale-105 transition duration-500 ease-in-out'
+                                                className='min-h-[300px] w-full min-w-[300px] border-3 border-moggle object-cover
+                                                transition duration-500 ease-in-out hover:scale-105'
                                                 src={picture.image.asset.url}
                                                 alt={picture.image.alt}
                                                 width={500}

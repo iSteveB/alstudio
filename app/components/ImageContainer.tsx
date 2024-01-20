@@ -10,9 +10,9 @@ interface ImageContainerProps {
 
 const ImageContainer: React.FC<ImageContainerProps> = ({ imgSrc, imgAlt, border }) => {
     return (
-        <div className={`hidden lg:block md:w-1/2 ${border} md:border-moggle lg:object-cover`}>
+        <div className={`hidden md:w-1/2 lg:block ${border} md:border-moggle lg:object-cover`}>
             <Image
-                className='w-full h-full min-h-[378px]'
+                className='size-full min-h-[378px]'
                 src={imgSrc}
                 alt={imgAlt}
                 priority

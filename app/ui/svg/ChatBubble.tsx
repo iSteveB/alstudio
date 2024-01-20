@@ -9,7 +9,7 @@ function ChatBubble() {
     return (
         <div className='lg:hidden'>
             <div
-                className='w-10 hover:scale-125 cursor-pointer duration-300 transition-all ease-in-out'
+                className='w-10 cursor-pointer transition-all duration-300 ease-in-out hover:scale-125'
                 onClick={() => setShowSocialNetwork(!showSocialNetwork)}>
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
                     <path
@@ -31,21 +31,21 @@ function ChatBubble() {
             <div
                 className={`uppercase ${gabriela.className} ${
                     showSocialNetwork
-                        ? 'fixed top-[162px] left-0 w-full h-full bg-crema flex-col pt-24 z-2'
-                        : 'lg:flex hidden flex-row bottom-0 items-center gap-6 transition'
+                        ? 'fixed left-0 top-[162px] z-10 h-screen w-full flex-col bg-crema pt-24'
+                        : 'bottom-0 hidden flex-row items-center gap-6 transition lg:flex'
                 } `}>
                 <ul className='flex flex-col items-center gap-10'>
                     {links.map((link, index) => (
                         <li
                             key={index}
-                            className='hover:scale-125 duration-300 transition-all ease-in-out'>
+                            className='transition-all duration-300 ease-in-out hover:scale-125'>
                             <Link
                                 href={link.href}
                                 onClick={() =>
                                     setShowSocialNetwork(!showSocialNetwork)
                                 }
                                 target={link.newTab ? '_blank' : '_self'}
-                                className='flex items-center text-xl gap-2'>
+                                className='flex items-center gap-2 text-xl'>
                                 {link.icon}
                                 <span>{link.text}</span>
                             </Link>

@@ -1,3 +1,4 @@
+// Docs: https://www.sanity.io/docs/schema-types
 import { defineType } from 'sanity';
 
 export default defineType({
@@ -30,6 +31,7 @@ export default defineType({
                 hotspot: true,
                 storeOriginalFilename: true,
                 accept: 'image/*',
+                metadata: ['dimensions'],
             },
             validation: (Rule) => Rule.required(),
             fields: [

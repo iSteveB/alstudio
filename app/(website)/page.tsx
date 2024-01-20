@@ -31,19 +31,19 @@ const Home = () => {
 
             <Aside text={randomOpinions.text} author={randomOpinions.author} />
 
-            <section className='border-b-3 border-moggle flex flex-col justify-center'>
-                <div className='flex flex-col items-center m-6'>
+            <section className='flex flex-col justify-center border-b-3 border-moggle'>
+                <div className='m-6 flex flex-col items-center'>
                     <h2
-                        className={`${gabriela.className} text-moggle text-4xl md:text-5xl text-center mt-8 mb-2 whitespace-nowrap`}>
+                        className={`${gabriela.className} mb-2 mt-8 whitespace-nowrap text-center text-4xl text-moggle md:text-5xl`}>
                         Choisir l&apos;instant
                     </h2>
-                    <span className='relative bg-moggle w-72 md:w-96 h-1 -z-10 before:absolute before:w-4 before:h-4 before:rotate-45 before:left-[-5px] before:top-[-5.7px] before:bg-moggle before:-z-10 after:absolute after:w-4 after:h-4 after:rotate-45 after:right-[-5px] after:top-[-5.7px] after:bg-moggle after:-z-10'></span>
+                    <span className='relative -z-10 h-1 w-72 bg-moggle before:absolute before:left-[-5px] before:top-[-5.7px] before:-z-10 before:size-4 before:rotate-45 before:bg-moggle after:absolute after:right-[-5px] after:top-[-5.7px] after:-z-10 after:size-4 after:rotate-45 after:bg-moggle md:w-96'></span>
                 </div>
-                <div className='flex gap-20 flex-wrap my-32 justify-center items-center'>
+                <div className='my-32 flex flex-wrap items-center justify-center gap-20'>
                     {CATEGORIES.map(({ id, src, alt, href, title }) => {
                         return (
                             <Link
-                                className='flex flex-col items-center gap-2 hover:scale-105 transition-all duration-300 ease-in-out'
+                                className='flex flex-col items-center gap-2 transition-all duration-300 ease-in-out hover:scale-105'
                                 href={href}
                                 key={id}>
                                 <div className='border-3 border-moggle'>
@@ -56,7 +56,7 @@ const Home = () => {
                                     />
                                 </div>
                                 <h3
-                                    className={`${gabriela.className} uppercase font-bold text-xl`}>
+                                    className={`${gabriela.className} text-xl font-bold uppercase`}>
                                     {title}
                                 </h3>
                             </Link>

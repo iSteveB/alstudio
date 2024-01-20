@@ -34,8 +34,8 @@ const Header = () => {
     };
 
     return isScrolled ? (
-        <header className='bg-crema flex justify-between items-center w-full py-2 md:px-16 px-8 border-b-3 border-moggle transition-all duration-300 ease-in-out'>
-            <div className='lg:flex-grow'>
+        <header className='flex w-full items-center justify-between border-b-3 border-moggle bg-crema px-8 py-2 transition-all duration-300 ease-in-out md:px-16'>
+            <div className='lg:grow'>
                 <div className='lg:flex'>
                     <Navigation
                         showMenu={showMenu}
@@ -43,22 +43,22 @@ const Header = () => {
                     />
                 </div>
                 <div
-                    className='lg:hidden block cursor-pointer hover:scale-125 duration-300 transition-all ease-in-out'
+                    className='block cursor-pointer transition-all duration-300 ease-in-out hover:scale-125 lg:hidden'
                     onClick={toggleMenu}>
                     {showMenu ? <CloseButton /> : <BurgerMenu />}
                 </div>
             </div>
-            <div className='lg:flex-grow'>
+            <div className='lg:grow'>
                 <Logo tailwindCSS='w-32'/>
             </div>
-            <div className='lg:flex-grow'>
+            <div className='lg:grow'>
                 <SocialNetwork tailwindcss='hidden lg:flex flex-row justify-between lg:gap-10 gap-20' />
                 <ChatBubble />
             </div>
         </header>
     ) : (
-        <header className='bg-crema flex justify-between items-center w-full py-8 md:px-16 px-8 border-b-3 border-moggle transition-all duration-300 ease-in-out'>
-            <div className='lg:flex-grow'>
+        <header className='flex w-full items-center justify-between border-b-3 border-moggle bg-crema p-8 transition-all duration-300 ease-in-out md:px-16'>
+            <div className='lg:grow'>
                 <div className='lg:flex'>
                     <Navigation
                         showMenu={showMenu}
@@ -66,17 +66,17 @@ const Header = () => {
                     />
                 </div>
                 <div
-                    className='lg:hidden block cursor-pointer hover:scale-125 duration-300 transition-all ease-in-out'
+                    className='block cursor-pointer transition-all duration-300 ease-in-out hover:scale-125 lg:hidden'
                     onClick={toggleMenu}>
                     {showMenu ? <CloseButton /> : <BurgerMenu />}
                 </div>
             </div>
 
-            <div className='lg:flex-grow'>
+            <div className='lg:grow'>
                 <Logo />
             </div>
 
-            <div className='lg:flex-grow'>
+            <div className='lg:grow'>
                 <SocialNetwork tailwindcss='hidden lg:flex flex-row justify-between lg:gap-10 gap-20' />
                 <ChatBubble />
             </div>

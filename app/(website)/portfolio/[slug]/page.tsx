@@ -10,12 +10,15 @@ export default async function Page({ params }: { params: { slug: string } }) {
         <div>
             {picture && (
                 <Modal>
-                <Image
-                    src={picture[0].image.asset.url}
-                    alt={picture[0].image.alt}
-                    width={900}
-                    height={900}
-                />
+                    <Image
+                       
+                        src={picture[0].image.asset.url}
+                        alt={picture[0].image.alt}
+                        width={picture[0].image.asset.metadata.dimensions.width}
+                        height={picture[0].image.asset.metadata.dimensions.height}
+                        objectFit='fit'
+                        />
+                        
                 </Modal>
             )}
         </div>
