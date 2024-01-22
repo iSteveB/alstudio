@@ -15,7 +15,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html className='m-0 h-full' lang='en'>
+        <html className='m-0 h-full' lang='fr'>
             <body
                 className={`${amiko.className} flex h-full flex-col bg-crema`}>
                 <div className='fixed top-0 w-full'>

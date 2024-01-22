@@ -5,7 +5,7 @@ export const CATEGORIES = [
         id: uuidv4(),
         src: '/images/pregnancy.jpg',
         alt: 'Grossesse',
-        href: '/',
+        href: '/services',
         title: 'Grossesse',
     },
     {
