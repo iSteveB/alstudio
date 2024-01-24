@@ -5,15 +5,11 @@ import pic2 from '@/public/images/DSC_0123.webp';
 import Section from '../components/Section';
 import Aside from '../components/Aside';
 
-import {gabriela } from '../ui/font';
+import { gabriela } from '../ui/font';
 import { CATEGORIES } from '../data/categories';
-import { OPINIONS } from '../data/opinions';
-import ImageContainer from '../components/ImageContainer';
+import ImageSectionContainer from '../components/ImageSectionContainer';
 
 const Home = () => {
-    const randomOpinions =
-        OPINIONS[Math.floor(Math.random() * OPINIONS.length)];
-
     return (
         <main>
             <Section
@@ -22,14 +18,14 @@ const Home = () => {
                 buttonText='Réserver une Séance'
                 buttonLink='/contact'
                 reverse={false}>
-                <ImageContainer
+                <ImageSectionContainer
                     imgSrc={pic}
                     imgAlt='Shooting'
                     border='md:border-l-4'
                 />
             </Section>
 
-            <Aside text={randomOpinions.text} author={randomOpinions.author} />
+            <Aside />
 
             <section className='flex flex-col justify-center border-b-3 border-moggle'>
                 <div className='m-6 flex flex-col items-center'>
@@ -70,7 +66,7 @@ const Home = () => {
                 buttonText='Me découvrir'
                 buttonLink='/contact'
                 reverse={true}>
-                <ImageContainer
+                <ImageSectionContainer
                     imgSrc={pic2}
                     imgAlt='Déborah Tétéa'
                     border={'md:border-r-4'}

@@ -7,8 +7,8 @@ import { gabriela, prata } from '../ui/font';
 interface SectionProps {
     id?: string;
     title: string;
-    subtitle: string;
-    text?: JSX.Element | string;
+    subtitle?: string;
+    text?: JSX.Element | string | boolean;
     buttonText?: string;
     buttonLink?: string;
     reverse: boolean;
@@ -32,8 +32,8 @@ const Section: React.FC<SectionProps> = ({
         <section
         id={id}
             className={`flex ${sectionDirection} flex-wrap items-center border-b-3 border-moggle xl:flex-nowrap`}>
-            <div className='mx-auto my-10 flex w-full flex-col items-center justify-center md:p-0  lg:w-1/2 '>
-                <div className='flex flex-col items-center gap-6 text-center xl:ml-10 xl:items-start xl:text-start'>
+            <div className='mx-auto my-10 flex w-full flex-col justify-center md:p-0  lg:w-1/2 '>
+                <div className='flex flex-col  items-center gap-6 text-center xl:ml-10 xl:items-start xl:text-start'>
                     <h2 className={`${gabriela.className} text-2xl text-lion `}>
                         {title}
                     </h2>
@@ -41,6 +41,11 @@ const Section: React.FC<SectionProps> = ({
                         className={`${prata.className} text-center text-5xl leading-relaxed xl:text-left`}>
                         {subtitle}
                     </h3>
+                    {text && (
+                        <p className='px-8 text-center text-moggle lg:px-0 xl:text-left'>
+                            {text}
+                        </p>
+                    )}
                     {buttonText && buttonLink && (
                         <Link href={buttonLink}>
                             <Button
@@ -56,11 +61,6 @@ const Section: React.FC<SectionProps> = ({
                             type='button'
                             handleClick={(event) => handleClick && handleClick(event)}
                         />
-                    )}
-                    {text && (
-                        <p className='px-8 text-center text-moggle lg:px-0 xl:text-left'>
-                            {text}
-                        </p>
                     )}
                 </div>
             </div>
