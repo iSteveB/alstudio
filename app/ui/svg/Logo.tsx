@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 interface Props {
@@ -6,6 +7,7 @@ interface Props {
 
 const Logo: React.FC<Props> = ({tailwindCSS = "w-[207px] h-[96px]"}) => {
   return (
+    <Link href="/">
     <svg
     className={tailwindCSS}
       xmlns="http://www.w3.org/2000/svg"
@@ -85,6 +87,7 @@ const Logo: React.FC<Props> = ({tailwindCSS = "w-[207px] h-[96px]"}) => {
         </filter>
       </defs>
     </svg>
+    </Link>
   );
 }
 

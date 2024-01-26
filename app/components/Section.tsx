@@ -13,7 +13,9 @@ interface SectionProps {
     buttonLink?: string;
     reverse: boolean;
     children?: React.ReactNode;
-    handleClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+    handleClick?: (
+        event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+    ) => void;
 }
 
 const Section: React.FC<SectionProps> = ({
@@ -30,7 +32,7 @@ const Section: React.FC<SectionProps> = ({
     const sectionDirection = reverse ? 'flex-row-reverse' : 'flex-row';
     return (
         <section
-        id={id}
+            id={id}
             className={`flex ${sectionDirection} flex-wrap items-center border-b-3 border-moggle xl:flex-nowrap`}>
             <div className='mx-auto my-10 flex w-full flex-col justify-center md:p-0  lg:w-1/2 '>
                 <div className='flex flex-col  items-center gap-6 text-center xl:ml-10 xl:items-start xl:text-start'>
@@ -38,28 +40,26 @@ const Section: React.FC<SectionProps> = ({
                         {title}
                     </h2>
                     <h3
-                        className={`${prata.className} text-center text-5xl leading-relaxed xl:text-left`}>
+                        className={`${prata.className} mx-2 text-center text-5xl leading-relaxed lg:mx-0 xl:text-left`}>
                         {subtitle}
                     </h3>
                     {text && (
-                        <p className='px-8 text-center text-moggle lg:px-0 xl:text-left'>
+                        <div className=' flex flex-col gap-4 px-8 text-center text-moggle lg:px-0 xl:text-left'>
                             {text}
-                        </p>
+                        </div>
                     )}
                     {buttonText && buttonLink && (
                         <Link href={buttonLink}>
-                            <Button
-                                text={buttonText}
-                                type='button'
-                                
-                            />
+                            <Button text={buttonText} type='button' />
                         </Link>
                     )}
                     {buttonText && !buttonLink && (
                         <Button
                             text={buttonText}
                             type='button'
-                            handleClick={(event) => handleClick && handleClick(event)}
+                            handleClick={(event) =>
+                                handleClick && handleClick(event)
+                            }
                         />
                     )}
                 </div>

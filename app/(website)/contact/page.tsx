@@ -9,14 +9,17 @@ const Contact = () => {
         <div>
             <Section
                 title='Je souhaite'
-                subtitle='Réserver une séance.'
+                subtitle='Réservez une séance.'
                 text={
                     <>
-                        Pour réserver la séance photo de votre choix, vous
-                        pouvez remplir le formulaire.
-                        <br /> <br />
-                        Vous pouvez également me contacter directement via mes
-                        réseaux sociaux ci-dessous.
+                        <p>
+                            Pour <strong>réserver la séance photo</strong> de votre choix, vous
+                            pouvez remplir le formulaire.
+                        </p>
+                        <p>
+                            Vous pouvez également me contacter directement via
+                            mes réseaux sociaux ci-dessous.
+                        </p>
                     </>
                 }
                 reverse={false}>
@@ -32,13 +35,9 @@ const Contact = () => {
                             Restez informés de mes événements, offres
                             promotionnelles et jeux concours en me suivant sur
                             mes différents réseaux.
-                            <br /> <br />
-                            Vous pouvez également me contacter directement sur
-                            l&apos;un d&apos;entre eux pour réserver l&apos;une
-                            de mes prestations.
                         </>
                     }>
-                    <div className='m-10 flex w-full flex-col gap-5 md:mx-auto md:w-1/2 lg:w-1/4'>
+                    <div className='mx-10 mb-10 flex w-full flex-col gap-5 md:mx-auto md:w-1/2 lg:my-10 lg:w-1/4'>
                         <Button
                             text='Instagram'
                             type='button'

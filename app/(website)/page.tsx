@@ -35,7 +35,7 @@ const Home = () => {
                     </h2>
                     <span className='relative -z-10 h-1 w-72 bg-moggle before:absolute before:left-[-5px] before:top-[-5.7px] before:-z-10 before:size-4 before:rotate-45 before:bg-moggle after:absolute after:right-[-5px] after:top-[-5.7px] after:-z-10 after:size-4 after:rotate-45 after:bg-moggle md:w-96'></span>
                 </div>
-                <div className='my-32 flex flex-wrap items-center justify-center gap-20'>
+                <div className='my-12 flex flex-wrap items-center justify-center gap-20 lg:my-32'>
                     {CATEGORIES.map(({ id, src, alt, href, title }) => {
                         return (
                             <Link
