@@ -64,7 +64,7 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
             <Body style={main}>
                 <Container>
                     <Section style={logo}>
-                        <Img src={'/react-email-starter/static/alstudio.png'} />
+                        <Img src={'/public/images/alstudio.png'} />
                     </Section>
 
                     <Section style={content}>
