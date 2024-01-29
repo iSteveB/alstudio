@@ -3,7 +3,7 @@ import React from 'react';
 import Image, { StaticImageData } from 'next/image';
 
 interface ImageSectionContainerProps {
-    imgSrc: StaticImageData;
+    imgSrc: StaticImageData | string;
     imgAlt: string;
     border?: string;
 }

@@ -1,18 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
 import { PictureData } from '@/types/pictureData';
+import ImageSectionContainer from './ImageSectionContainer';
 
 
 const ImageCard = ({picture}: {picture: PictureData}) => {
     return (
-        <>
-            <Image
-                    src={picture.image.asset.url}
-                    alt={picture.image.alt}
-                    width={900}
-                    height={900}
-                />
-        </>
+        <ImageSectionContainer imgSrc={picture.image.asset.url} imgAlt={picture.image.alt}/>
     );
 };
 

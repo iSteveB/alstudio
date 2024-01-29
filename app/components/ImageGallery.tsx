@@ -51,18 +51,23 @@ const ImageGallery = ({
                                 className='max-w-[100%] basis-full md:max-w-[50%] md:basis-2/4 lg:max-w-[25%] lg:basis-1/4'>
                                 {array.map((picture: PictureData) => {
                                     return (
-                                        <div key={picture._id} className='p-2'>
-                                            <Link href={`/portfolio/${picture.slug}`}>
-                                            <Image
-                                                className='min-h-[300px] w-full min-w-[300px] border-3 border-moggle object-cover
+                                        <Link
+                                            key={picture._id}
+                                            href={`/portfolio/${picture.slug}`}>
+                                            <div className='p-2'>
+                                                <Image
+                                                    className='min-h-[300px] w-full min-w-[300px] border-3 border-moggle object-cover
                                                 transition duration-500 ease-in-out hover:scale-105'
-                                                src={picture.image.asset.url}
-                                                alt={picture.image.alt}
-                                                width={500}
-                                                height={500}
-                                            />
-                                            </Link>
-                                        </div>
+                                                    src={
+                                                        picture.image.asset.url
+                                                    }
+                                                    alt={picture.image.alt}
+                                                    width={500}
+                                                    height={500}
+                                                    priority
+                                                />
+                                            </div>
+                                        </Link>
                                     );
                                 })}
                             </div>
@@ -70,7 +75,6 @@ const ImageGallery = ({
                     })}
                 </div>
             </div>
-            <div />
         </div>
     );
 };
