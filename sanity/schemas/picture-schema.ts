@@ -30,8 +30,7 @@ export default defineType({
             options: {
                 hotspot: true,
                 storeOriginalFilename: true,
-                accept: 'image/*',
-                metadata: ['dimensions'],
+                accept: 'image/webp',
             },
             validation: (Rule) => Rule.required(),
             fields: [
