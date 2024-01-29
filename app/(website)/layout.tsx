@@ -9,8 +9,8 @@ export const metadata: Metadata = {
         default: 'AL Studio Photo',
         template: '%s | AL Studio Photo',
     },
-    description: 
-    "Réalisez vos photos de grossesse, famille et d'événements avec une photographe professionnelle, capturant l'essence de moments précieux. Réservez votre séance maintenant pour un shooting mémorable.",
+    description:
+        "Réalisez vos photos de grossesse, famille et d'événements avec une photographe professionnelle, capturant l'essence de moments précieux. Réservez votre séance maintenant pour un shooting mémorable.",
     openGraph: {
         type: 'website',
         locale: 'fr_FR',
@@ -25,9 +25,6 @@ export const metadata: Metadata = {
             },
         ],
     },
-
-
-
 };
 
 export default function RootLayout({
