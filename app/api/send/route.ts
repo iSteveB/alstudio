@@ -11,7 +11,7 @@ interface BodyParams {
     message: string;
 }
 
-const resend = new Resend('re_2Hu8oMxB_NVLrs87x8Z16UrVUjZY3BgSB');
+const resend = new Resend(process.env.RESEND_API_KEY as string);
 
 export async function POST(request: Request) {
     const body = await request.json();
