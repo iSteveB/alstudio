@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
-import Image from 'next/image';
 import Section from '@/app/components/Section';
 import React, { useReducer } from 'react';
 import { State } from '@/types/reducer';
@@ -13,6 +12,7 @@ import pregnancy from '@/public/images/DSC_0620.webp';
 import child from '@/public/images/MTXX_MR20231128_212011762.webp';
 import portrait from '@/public/images/MTXX_MR20231201_010133263.webp';
 import event from '@/public/images/1730877.webp';
+import ImageSectionContainer from '@/app/components/ImageSectionContainer';
 
 const Services = () => {
     const [state, dispatch] = useReducer(isOpenReducer, {
@@ -101,11 +101,10 @@ const Services = () => {
                     state.toggleCategoryA ? 'Retour' : 'Choisir ma Séance'
                 }
                 handleClick={() => dispatch({ type: 'PREGNANCY' })}>
-                <Image
-                    src={pregnancy}
-                    alt={'Grossesse'}
-                    objectFit='cover'
-                    className='hidden h-auto max-h-[70vh] max-w-[50%] lg:block'
+                <ImageSectionContainer
+                    imgSrc={pregnancy}
+                    imgAlt={'Grossesse'}
+                    border={'md:border-l-4'}
                 />
             </Section>
 
@@ -202,11 +201,10 @@ const Services = () => {
                     state.toggleCategoryB ? 'Retour' : 'Choisir ma Séance'
                 }
                 handleClick={() => dispatch({ type: 'CHILD' })}>
-                <Image
-                    src={child}
-                    alt={'Enfance'}
-                    objectFit='cover'
-                    className='hidden h-full max-w-[52%] lg:block'
+                <ImageSectionContainer
+                    imgSrc={child}
+                    imgAlt={'Enfance'}
+                    border={'md:border-r-4'}
                 />
             </Section>
 
@@ -277,10 +275,10 @@ const Services = () => {
                     state.toggleCategoryC ? 'Retour' : 'Choisir ma Séance'
                 }
                 handleClick={() => dispatch({ type: 'PORTRAIT' })}>
-                <Image
-                    src={portrait}
-                    alt={'Portrait'}
-                    className='hidden max-h-[70vh] max-w-[50%] object-cover lg:block'
+                <ImageSectionContainer
+                    imgSrc={portrait}
+                    imgAlt={'Portrait'}
+                    border={'md:border-l-4'}
                 />
             </Section>
 
@@ -398,9 +396,6 @@ const Services = () => {
                                             </div>
                                         </details>
                                     </div>
-
-                                   
-
                                     <Link href='/contact'>
                                         <Button
                                             text={'250 €'}
@@ -417,10 +412,10 @@ const Services = () => {
                     state.toggleCategoryD ? 'Retour' : 'Choisir ma Séance'
                 }
                 handleClick={() => dispatch({ type: 'EVENT' })}>
-                <Image
-                    src={event}
-                    alt={'Événements'}
-                    className='hidden max-h-[100vh] max-w-[50%] object-cover lg:block'
+                <ImageSectionContainer
+                    imgSrc={event}
+                    imgAlt={'Événements'}
+                    border={'md:border-r-4'}
                 />
             </Section>
         </div>
