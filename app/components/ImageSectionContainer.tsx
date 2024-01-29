@@ -17,7 +17,7 @@ const ImageSectionContainer: React.FC<ImageSectionContainerProps> = ({
         <div
             className={`hidden md:w-1/2 lg:block ${border} md:border-moggle lg:object-cover`}>
             <Image
-                className='size-full min-h-[378px]'
+                className='size-full max-h-[90vh] min-h-[378px] object-cover'
                 src={imgSrc}
                 alt={imgAlt}
                 priority
