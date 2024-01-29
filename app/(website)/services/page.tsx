@@ -333,7 +333,7 @@ const Services = () => {
                                 </h3>
 
                                 <div className='grid grid-cols-2 grid-rows-2 items-center gap-y-2 lg:gap-x-16 lg:gap-y-4'>
-                                    <div className=''>
+                                    <div>
                                         <h4>Forfait 1</h4>
 
                                         <details className='z-20 hover:cursor-pointer'>
