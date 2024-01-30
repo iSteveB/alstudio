@@ -50,7 +50,7 @@ const Form = () => {
             name='contact-form'
             onSubmit={handleFormData}
             className={`${gabriela.className} m-auto flex w-5/6 flex-col items-center`}>
-            <div className='mb-10 flex w-full flex-col gap-4 lg:mx-16 lg:w-2/3'>
+            <div className='mb-10 flex w-full flex-col gap-4 lg:mx-16 lg:my-6 lg:w-2/3'>
                 <div className='flex w-full flex-col gap-3 md:flex-row'>
                     <div className='w-full flex-col items-start'>
                         <label htmlFor='lastName'>Nom</label>
