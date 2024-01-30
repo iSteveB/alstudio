@@ -5,7 +5,7 @@ interface Props {
   tailwindCSS?: string;
 }
 
-const Logo: React.FC<Props> = ({tailwindCSS = "w-[207px] h-[96px]"}) => {
+const Logo: React.FC<Props> = ({tailwindCSS = "w-72 h-20"}) => {
   return (
     <Link href="/">
     <svg

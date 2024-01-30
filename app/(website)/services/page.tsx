@@ -6,7 +6,6 @@ import { State } from '@/types/reducer';
 import Aside from '@/app/components/Aside';
 import { isOpenReducer } from '@/app/reducers/isOpenReducer';
 import Button from '@/app/components/Button';
-import Link from 'next/link';
 
 import pregnancy from '@/public/images/DSC_0620.webp';
 import child from '@/public/images/MTXX_MR20231128_212011762.webp';
@@ -82,17 +81,17 @@ const Services = () => {
                                     Nouveau-né
                                 </h3>
                             </div>
-                            <Link href='/contact'>
-                                <Button text={'250 €'} type={'button'} />
-                            </Link>
+                            <form action='/contact'>
+                                <Button text={'250 €'} type={'submit'}/>
+                            </form>
 
-                            <Link href='/contact'>
-                                <Button text={'320 €'} type={'button'} />
-                            </Link>
+                            <form action='/contact'>
+                                <Button text={'320 €'} type={'submit'} />
+                            </form>
 
-                            <Link href='/contact'>
-                                <Button text={'550 €'} type={'button'} />
-                            </Link>
+                            <form action='/contact'>
+                                <Button text={'550 €'} type={'submit'} />
+                            </form>
                         </div>
                     )
                 }
@@ -182,17 +181,17 @@ const Services = () => {
                                     </ul>
                                 </details>
                             </div>
-                            <Link href='/contact'>
-                                <Button text={'200 €'} type={'button'} />
-                            </Link>
+                            <form action='/contact'>
+                                <Button text={'200 €'} type={'submit'} />
+                            </form>
 
-                            <Link href='/contact'>
-                                <Button text={'220 €'} type={'button'} />
-                            </Link>
+                            <form action='/contact'>
+                                <Button text={'220 €'} type={'submit'} />
+                            </form>
 
-                            <Link href='/contact'>
-                                <Button text={'150 €'} type={'button'} />
-                            </Link>
+                            <form action='/contact'>
+                                <Button text={'150 €'} type={'submit'} />
+                            </form>
                         </div>
                     )
                 }
@@ -260,13 +259,13 @@ const Services = () => {
                                 </details>
                             </div>
 
-                            <Link href='/contact'>
-                                <Button text={'160 €'} type={'button'} />
-                            </Link>
+                            <form action='/contact'>
+                                <Button text={'160 €'} type={'submit'} />
+                            </form>
 
-                            <Link href='/contact'>
-                                <Button text={'190 €'} type={'button'} />
-                            </Link>
+                            <form action='/contact'>
+                                <Button text={'190 €'} type={'submit'} />
+                            </form>
                         </div>
                     )
                 }
@@ -305,23 +304,23 @@ const Services = () => {
                                         De la préparation de la Mariée au vin
                                         d&apos;honneur.
                                     </p>
-                                    <Link href='/contact'>
+                                    <form action='/contact'>
                                         <Button
                                             text={'550 €'}
-                                            type={'button'}
+                                            type={'submit'}
                                         />
-                                    </Link>
+                                    </form>
 
                                     <p>
                                         De la préparation de la Mariée à la
                                         pièce montée.
                                     </p>
-                                    <Link href='/contact'>
+                                    <form action='/contact'>
                                         <Button
                                             text={'1 000 €'}
-                                            type={'button'}
+                                            type={'submit'}
                                         />
-                                    </Link>
+                                    </form>
                                 </div>
                             </div>
 
@@ -360,12 +359,12 @@ const Services = () => {
                                             </div>
                                         </details>
                                     </div>
-                                    <Link href='/contact'>
+                                    <form action='/contact'>
                                         <Button
                                             text={'160 €'}
-                                            type={'button'}
+                                            type={'submit'}
                                         />
-                                    </Link>
+                                    </form>
 
                                     <div>
                                         <h4>Forfait 2</h4>
@@ -396,12 +395,12 @@ const Services = () => {
                                             </div>
                                         </details>
                                     </div>
-                                    <Link href='/contact'>
+                                    <form action='/contact'>
                                         <Button
                                             text={'250 €'}
-                                            type={'button'}
+                                            type={'submit'}
                                         />
-                                    </Link>
+                                    </form>
                                 </div>
                             </div>
                         </div>

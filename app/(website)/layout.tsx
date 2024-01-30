@@ -5,26 +5,9 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 export const metadata: Metadata = {
-    title: {
-        default: 'AL Studio Photo',
-        template: '%s | AL Studio Photo',
-    },
+    title:'AL Studio Photo',
     description:
         "Réalisez vos photos de grossesse, famille et d'événements avec une photographe professionnelle, capturant l'essence de moments précieux. Réservez votre séance maintenant pour un shooting mémorable.",
-    openGraph: {
-        type: 'website',
-        locale: 'fr_FR',
-        url: 'https://alstudiophoto.com',
-        siteName: 'AL Studio Photo',
-        images: [
-            {
-                url: 'https://alstudiophoto.com/images/og-image.jpg',
-                width: 1200,
-                height: 630,
-                alt: 'AL Studio Photo',
-            },
-        ],
-    },
 };
 
 export default function RootLayout({

@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import Button from './Button';
 
 import { gabriela, prata } from '../ui/font';
@@ -34,8 +33,8 @@ const Section: React.FC<SectionProps> = ({
         <section
             id={id}
             className={`flex ${sectionDirection} flex-wrap items-center border-b-3 border-moggle xl:flex-nowrap`}>
-            <div className='mx-auto my-10 flex w-full flex-col justify-center md:p-0  lg:w-1/2 '>
-                <div className='flex flex-col  items-center gap-6 text-center xl:ml-10 xl:items-start xl:text-start'>
+            <div className='mx-auto my-10 flex w-full flex-col justify-center md:p-0 lg:my-0 lg:w-1/2 '>
+                <div className='flex flex-col items-center gap-6 text-center xl:ml-10 xl:items-start xl:text-start'>
                     <h2 className={`${gabriela.className} text-2xl text-lion `}>
                         {title}
                     </h2>
@@ -49,9 +48,9 @@ const Section: React.FC<SectionProps> = ({
                         </div>
                     )}
                     {buttonText && buttonLink && (
-                        <Link href={buttonLink}>
-                            <Button text={buttonText} type='button' />
-                        </Link>
+                        <form action={buttonLink}>
+                            <Button text={buttonText} type='submit' />
+                        </form>
                     )}
                     {buttonText && !buttonLink && (
                         <Button
