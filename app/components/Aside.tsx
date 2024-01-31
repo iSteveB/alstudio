@@ -18,7 +18,7 @@ const Aside: React.FC = () => {
 
     return (
         <aside
-            className='flex min-h-[150px] w-full flex-col items-center justify-center bg-moggle'
+            className='flex h-auto min-h-[150px] w-screen flex-col items-center justify-center bg-moggle p-2'
             suppressHydrationWarning>
             <div className='max-w-3xl'>
                 <div className='mx-6 flex w-auto flex-col items-center'>

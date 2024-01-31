@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import Form from '../../components/Form';
 import Section from '../../components/Section';
@@ -25,7 +26,7 @@ const Contact = () => {
                             promotionnelles et jeux concours en me suivant sur
                             mes différents réseaux.
                         </p>
-                        <div className=' flex w-full justify-center gap-5 md:mx-auto lg:justify-start'>
+                        <div className='mt-5 flex w-full flex-wrap justify-center gap-5 md:mx-auto lg:justify-start'>
                             <Button
                                 text='Instagram'
                                 type='button'

@@ -1,17 +1,18 @@
-/* eslint-disable @next/next/no-img-element */
 'use client';
-import Section from '@/app/components/Section';
-import React, { useReducer } from 'react';
+import { useReducer } from 'react';
 import { State } from '@/types/reducer';
-import Aside from '@/app/components/Aside';
 import { isOpenReducer } from '@/app/reducers/isOpenReducer';
+import { motion } from 'framer-motion';
+
+import Section from '@/app/components/Section';
+import Aside from '@/app/components/Aside';
 import Button from '@/app/components/Button';
+import ImageSectionContainer from '@/app/components/ImageSectionContainer';
 
 import pregnancy from '@/public/images/DSC_0620.webp';
 import child from '@/public/images/MTXX_MR20231128_212011762.webp';
 import portrait from '@/public/images/MTXX_MR20231201_010133263.webp';
 import event from '@/public/images/1730877.webp';
-import ImageSectionContainer from '@/app/components/ImageSectionContainer';
 
 const Services = () => {
     const [state, dispatch] = useReducer(isOpenReducer, {
@@ -32,7 +33,11 @@ const Services = () => {
                 }
                 text={
                     state.toggleCategoryA && (
-                        <div className='grid grid-flow-col-dense grid-rows-3 gap-x-3 gap-y-4 lg:gap-x-10 lg:gap-y-8'>
+                        <motion.div
+                            initial={{ opacity: 0, y: -10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className='grid grid-flow-col-dense grid-rows-3 gap-x-3 gap-y-4 lg:gap-x-10 lg:gap-y-8'>
                             <div>
                                 <h3 className='text-lg font-extrabold'>
                                     Séance Grossesse Douceur
@@ -41,7 +46,12 @@ const Services = () => {
                                     <summary>
                                         1h30 | 15 photos + 15 photos NB
                                     </summary>
-                                    <ul className='absolute border-2 border-moggle bg-crema p-3 text-sm'>
+
+                                    <motion.ul
+                                        initial={{ opacity: 0, y: -10 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.5 }}
+                                        className='absolute left-0.5 border-2 border-moggle bg-crema p-3 text-sm lg:left-10'>
                                         <li>6€ par photo supplémentaire.</li>
                                         <li>
                                             Seule, en couple ou en famille (5
@@ -51,7 +61,10 @@ const Services = () => {
                                             Différentes tenues peuvent être
                                             proposées lors de la séance.
                                         </li>
-                                    </ul>
+                                        <li>
+                                            Maquillage possible sur place - 50€
+                                        </li>
+                                    </motion.ul>
                                 </details>
                             </div>
                             <div>
@@ -62,7 +75,11 @@ const Services = () => {
                                     <summary>
                                         2h30 | 30 photos + 30 photos NB
                                     </summary>
-                                    <ul className='absolute border-2 border-moggle bg-crema p-3'>
+                                    <motion.ul
+                                        initial={{ opacity: 0, y: -10 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.5 }}
+                                        className='absolute left-0.5 border-2 border-moggle bg-crema p-3 text-sm lg:left-10'>
                                         <li>6€ par photo supplémentaire.</li>
                                         <li>
                                             Seule, en couple ou en famille (5
@@ -72,7 +89,10 @@ const Services = () => {
                                             Différentes tenues peuvent être
                                             proposées lors de la séance.
                                         </li>
-                                    </ul>
+                                        <li>
+                                            Maquillage possible sur place - 50€
+                                        </li>
+                                    </motion.ul>
                                 </details>
                             </div>
                             <div>
@@ -82,7 +102,7 @@ const Services = () => {
                                 </h3>
                             </div>
                             <form action='/contact'>
-                                <Button text={'250 €'} type={'submit'}/>
+                                <Button text={'250 €'} type={'submit'} />
                             </form>
 
                             <form action='/contact'>
@@ -92,7 +112,7 @@ const Services = () => {
                             <form action='/contact'>
                                 <Button text={'550 €'} type={'submit'} />
                             </form>
-                        </div>
+                        </motion.div>
                     )
                 }
                 reverse={false}
@@ -119,7 +139,11 @@ const Services = () => {
                 }
                 text={
                     state.toggleCategoryB && (
-                        <div className='grid grid-flow-col-dense grid-rows-3 gap-x-3 gap-y-2 lg:gap-x-10 lg:gap-y-4'>
+                        <motion.div
+                            initial={{ opacity: 0, y: -10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className='grid grid-flow-col-dense grid-rows-3 gap-x-3 gap-y-2 lg:gap-x-10 lg:gap-y-4'>
                             <div>
                                 <h3 className='text-lg font-extrabold'>
                                     Séance Nouveau-né
@@ -128,7 +152,11 @@ const Services = () => {
                                     <summary>
                                         1h30 | 15 photos + 15 photos NB
                                     </summary>
-                                    <ul className='absolute border-2 border-moggle bg-crema p-3'>
+                                    <motion.ul
+                                        initial={{ opacity: 0, y: -10 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.5 }}
+                                        className='absolute left-0.5 border-2 border-moggle bg-crema p-3 text-sm lg:left-10'>
                                         <li>6€ par photos supplémentaire.</li>
                                         <li>
                                             Seul(e), fratrie ou en famille (5
@@ -138,7 +166,7 @@ const Services = () => {
                                             Différentes tenues peuvent être
                                             proposées lors de la séance.
                                         </li>
-                                    </ul>
+                                    </motion.ul>
                                 </details>
                             </div>
                             <div>
@@ -149,7 +177,11 @@ const Services = () => {
                                     <summary>
                                         1h30 | 15 photos + 15 photos NB
                                     </summary>
-                                    <ul className='absolute border-2 border-moggle bg-crema p-3'>
+                                    <motion.ul
+                                        initial={{ opacity: 0, y: -10 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.5 }}
+                                        className='absolute left-0.5 border-2 border-moggle bg-crema p-3 text-sm lg:left-10'>
                                         <li>6€ par photo supplémentaire.</li>
                                         <li>
                                             Seul(e), fratrie ou en famille (5
@@ -159,7 +191,7 @@ const Services = () => {
                                             Différentes tenues peuvent être
                                             proposées lors de la séance.
                                         </li>
-                                    </ul>
+                                    </motion.ul>
                                 </details>
                             </div>
                             <div>
@@ -171,14 +203,18 @@ const Services = () => {
                                     <summary>
                                         1h30 | 10 photos + 10 photos NB
                                     </summary>
-                                    <ul className='absolute border-2 border-moggle bg-crema p-3'>
+                                    <motion.ul
+                                        initial={{ opacity: 0, y: -10 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.5 }}
+                                        className='absolute left-0.5 border-2 border-moggle bg-crema p-3 text-sm lg:left-10'>
                                         <li>6€ par photo supplémentaire.</li>
                                         <li>Seul(e).</li>
                                         <li>
                                             Différentes tenues peuvent être
                                             proposées lors de la séance.
                                         </li>
-                                    </ul>
+                                    </motion.ul>
                                 </details>
                             </div>
                             <form action='/contact'>
@@ -192,7 +228,7 @@ const Services = () => {
                             <form action='/contact'>
                                 <Button text={'150 €'} type={'submit'} />
                             </form>
-                        </div>
+                        </motion.div>
                     )
                 }
                 reverse={true}
@@ -219,7 +255,11 @@ const Services = () => {
                 }
                 text={
                     state.toggleCategoryC && (
-                        <div className='grid grid-flow-col-dense grid-cols-1 grid-rows-2 gap-x-5 gap-y-4 lg:gap-x-24 lg:gap-y-8'>
+                        <motion.div
+                            initial={{ opacity: 0, y: -10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className='grid grid-flow-col-dense grid-cols-1 grid-rows-2 gap-x-5 gap-y-4 lg:gap-x-24 lg:gap-y-8'>
                             <div>
                                 <h3 className='text-lg font-extrabold'>
                                     Séance Portrait Solo
@@ -228,13 +268,17 @@ const Services = () => {
                                     <summary>
                                         1h30 | 15 photos + 15 photos NB
                                     </summary>
-                                    <div className='absolute border-2 border-moggle bg-crema p-3'>
-                                        <p>6€ par photos supplémentaire.</p>
-                                        <p>
+                                    <motion.ul
+                                        initial={{ opacity: 0, y: -10 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.5 }}
+                                        className='absolute left-0.5 border-2 border-moggle bg-crema p-3 text-sm lg:left-10'>
+                                        <li>6€ par photos supplémentaire.</li>
+                                        <li>
                                             Différentes tenues peuvent être
                                             proposées lors de la séance.
-                                        </p>
-                                    </div>
+                                        </li>
+                                    </motion.ul>
                                 </details>
                             </div>
                             <div>
@@ -245,7 +289,11 @@ const Services = () => {
                                     <summary>
                                         1h30 | 15 photos + 15 photos NB
                                     </summary>
-                                    <ul className='absolute border-2 border-moggle bg-crema p-3'>
+                                    <motion.ul
+                                        initial={{ opacity: 0, y: -10 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.5 }}
+                                        className='absolute left-0.5 border-2 border-moggle bg-crema p-3 text-sm lg:left-10'>
                                         <li>6€ par photos supplémentaire.</li>
                                         <li>
                                             En couple, famille ou amis (5 pers
@@ -255,7 +303,7 @@ const Services = () => {
                                             Différentes tenues peuvent être
                                             proposées lors de la séance.
                                         </li>
-                                    </ul>
+                                    </motion.ul>
                                 </details>
                             </div>
 
@@ -266,7 +314,7 @@ const Services = () => {
                             <form action='/contact'>
                                 <Button text={'190 €'} type={'submit'} />
                             </form>
-                        </div>
+                        </motion.div>
                     )
                 }
                 reverse={false}
@@ -293,13 +341,17 @@ const Services = () => {
                 }
                 text={
                     state.toggleCategoryD && (
-                        <div className='flex flex-col gap-8'>
+                        <motion.div
+                            initial={{ opacity: 0, y: -10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className='flex flex-col gap-8'>
                             <div>
                                 <h3 className='text-lg font-extrabold'>
                                     Séance Mariage
                                 </h3>
 
-                                <div className='grid grid-cols-2 grid-rows-2 items-center gap-x-0 gap-y-4 lg:gap-x-16 lg:gap-y-8'>
+                                <div className='grid grid-flow-row-dense grid-cols-2 grid-rows-2 gap-x-5 gap-y-4 lg:gap-x-24 lg:gap-y-8'>
                                     <p>
                                         De la préparation de la Mariée au vin
                                         d&apos;honneur.
@@ -324,12 +376,12 @@ const Services = () => {
                                 </div>
                             </div>
 
-                            <div>
+                            <div className='w-full'>
                                 <h3 className='text-lg font-extrabold'>
                                     Séance Baptême & Communion
                                 </h3>
 
-                                <div className='grid grid-cols-2 grid-rows-2 items-center gap-y-2 lg:gap-x-16 lg:gap-y-4'>
+                                <div className='grid grid-flow-row-dense items-center gap-x-5 gap-y-2 lg:gap-x-16 lg:gap-y-4'>
                                     <div>
                                         <h4>Forfait 1</h4>
 
@@ -339,26 +391,31 @@ const Services = () => {
                                                 <br />
                                                 1h00 | 50 photos + 50 photos NB
                                             </summary>
-                                            <div className='absolute border-2 border-moggle bg-crema p-3'>
-                                                <ul>
-                                                    <li>
-                                                        6€ par photos
-                                                        supplémentaire.
-                                                    </li>
-                                                    <li>
-                                                        60€ l’heure
-                                                        supplémentaire au delà
-                                                        de 2h.
-                                                    </li>
-                                                    <li>
-                                                        Des frais de déplacement
-                                                        s’appliquent au delà de
-                                                        15 km.
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                            <motion.ul
+                                                initial={{ opacity: 0, y: -10 }}
+                                                whileInView={{
+                                                    opacity: 1,
+                                                    y: 0,
+                                                }}
+                                                transition={{ duration: 0.5 }}
+                                                className='absolute left-0.5 border-2 border-moggle bg-crema p-3 text-sm lg:left-10'>
+                                                <li>
+                                                    6€ par photos
+                                                    supplémentaire.
+                                                </li>
+                                                <li>
+                                                    60€ l’heure supplémentaire
+                                                    au delà de 2h.
+                                                </li>
+                                                <li>
+                                                    Des frais de déplacement
+                                                    s’appliquent au delà de 15
+                                                    km.
+                                                </li>
+                                            </motion.ul>
                                         </details>
                                     </div>
+
                                     <form action='/contact'>
                                         <Button
                                             text={'160 €'}
@@ -375,26 +432,31 @@ const Services = () => {
                                                 1h30 | 100 photos + 100 photos
                                                 NB
                                             </summary>
-                                            <div className='absolute border-2 border-moggle bg-crema p-3'>
-                                            <ul>
-                                                    <li>
-                                                        6€ par photos
-                                                        supplémentaire.
-                                                    </li>
-                                                    <li>
-                                                        60€ l’heure
-                                                        supplémentaire au delà
-                                                        de 2h.
-                                                    </li>
-                                                    <li>
-                                                        Des frais de déplacement
-                                                        s’appliquent au delà de
-                                                        15 km.
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                            <motion.ul
+                                                initial={{ opacity: 0, y: -10 }}
+                                                whileInView={{
+                                                    opacity: 1,
+                                                    y: 0,
+                                                }}
+                                                transition={{ duration: 0.5 }}
+                                                className='absolute left-0.5 border-2 border-moggle bg-crema p-3 text-sm lg:left-10'>
+                                                <li>
+                                                    6€ par photos
+                                                    supplémentaire.
+                                                </li>
+                                                <li>
+                                                    60€ l’heure supplémentaire
+                                                    au delà de 2h.
+                                                </li>
+                                                <li>
+                                                    Des frais de déplacement
+                                                    s’appliquent au delà de 15
+                                                    km.
+                                                </li>
+                                            </motion.ul>
                                         </details>
                                     </div>
+                                    
                                     <form action='/contact'>
                                         <Button
                                             text={'250 €'}
@@ -403,7 +465,7 @@ const Services = () => {
                                     </form>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     )
                 }
                 reverse={true}

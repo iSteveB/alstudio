@@ -8,6 +8,7 @@ interface Props {
 const Logo: React.FC<Props> = ({tailwindCSS = "w-72 h-20"}) => {
   return (
     <Link href="/">
+      <div className="flex justify-center">
     <svg
     className={tailwindCSS}
       xmlns="http://www.w3.org/2000/svg"
@@ -87,6 +88,7 @@ const Logo: React.FC<Props> = ({tailwindCSS = "w-72 h-20"}) => {
         </filter>
       </defs>
     </svg>
+    </div>
     </Link>
   );
 }

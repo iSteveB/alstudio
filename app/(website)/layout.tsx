@@ -5,7 +5,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 export const metadata: Metadata = {
-    title:'AL Studio Photo',
+    title: 'AL Studio Photo',
     description:
         "Réalisez vos photos de grossesse, famille et d'événements avec une photographe professionnelle, capturant l'essence de moments précieux. Réservez votre séance maintenant pour un shooting mémorable.",
 };
@@ -22,7 +22,8 @@ export default function RootLayout({
                 <div className='fixed top-0 z-50 w-full'>
                     <Header />
                 </div>
-                <div className='mt-[162px] flex-1'>{children}</div>
+                <div className='mt-[145px] flex-1'>{children}</div>
+
                 <Footer />
             </body>
         </html>

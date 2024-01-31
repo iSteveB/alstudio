@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from './Button';
 
+import { motion } from 'framer-motion';
 import { gabriela, prata } from '../ui/font';
 
 interface SectionProps {
@@ -30,12 +31,15 @@ const Section: React.FC<SectionProps> = ({
 }) => {
     const sectionDirection = reverse ? 'flex-row-reverse' : 'flex-row';
     return (
-        <section
+        <motion.section
+            initial={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            whileInView={{ opacity: 1 }}
             id={id}
             className={`flex ${sectionDirection} flex-wrap items-center border-b-3 border-moggle xl:flex-nowrap`}>
             <div className='mx-auto my-10 flex w-full flex-col justify-center md:p-0 lg:my-0 lg:w-1/2 '>
                 <div className='flex flex-col items-center gap-6 text-center xl:ml-10 xl:items-start xl:text-start'>
-                    <h2 className={`${gabriela.className} text-2xl text-lion `}>
+                    <h2 className={`${gabriela.className} text-3xl text-lion`}>
                         {title}
                     </h2>
                     <h3
@@ -64,7 +68,7 @@ const Section: React.FC<SectionProps> = ({
                 </div>
             </div>
             {children}
-        </section>
+        </motion.section>
     );
 };
 

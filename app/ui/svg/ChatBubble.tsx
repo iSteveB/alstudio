@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { links } from '@/app/data/links';
 import Link from 'next/link';
 import { gabriela } from '../font';
@@ -6,7 +6,7 @@ import { gabriela } from '../font';
 function ChatBubble() {
     const [showSocialNetwork, setShowSocialNetwork] = useState(false);
     const [isScrolled, setScrolled] = useState(false);
-    
+
     useEffect(() => {
         window.addEventListener('scroll', handleScroll, { passive: true });
 
@@ -48,7 +48,9 @@ function ChatBubble() {
             <div
                 className={`uppercase ${gabriela.className} ${
                     showSocialNetwork
-                        ? `fixed left-0 ${isScrolled ? 'top-[78px]' : 'top-[162px]'} z-10 h-screen w-full flex-col bg-crema pt-24`
+                        ? `fixed left-0 ${
+                              isScrolled ? 'top-[78px]' : 'top-[146px]'
+                          } z-10 h-screen w-full flex-col bg-crema pt-24`
                         : 'bottom-0 hidden flex-row items-center gap-6 transition lg:flex'
                 } `}>
                 <ul className='flex flex-col items-center gap-10'>

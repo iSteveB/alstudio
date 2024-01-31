@@ -61,7 +61,7 @@ const Navigation: React.FC<Props> = ({
                 onClick={setShowMenu}
                 className={`${
                     showMenu
-                        ? `fixed ${isScrolled ? 'top-[77px]' : 'top-[162px]'} left-0 flex h-screen w-full flex-col items-center justify-start gap-10 bg-crema pt-28 text-2xl`
+                        ? `fixed ${isScrolled ? 'top-[77px]' : 'top-[146px]'} left-0 flex h-screen w-full flex-col items-center justify-start gap-10 bg-crema pt-28 text-2xl`
                         : 'bottom-0 hidden flex-row items-center gap-6 transition lg:flex'
                 }`}>
                 {MENU.map(({ id, title, href }) => {

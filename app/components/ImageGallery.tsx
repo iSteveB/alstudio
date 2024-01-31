@@ -1,9 +1,11 @@
 'use client';
-import React, { useState, ChangeEvent } from 'react';
-import TagFilter from '@/app/components/TagFilter';
+import { useState, ChangeEvent } from 'react';
 import Image from 'next/image';
-import { PictureData } from '@/types/pictureData';
 import Link from 'next/link';
+import TagFilter from '@/app/components/TagFilter';
+
+import { motion } from 'framer-motion';
+import { PictureData } from '@/types/pictureData';
 
 const ImageGallery = ({
     pictures,
@@ -54,7 +56,7 @@ const ImageGallery = ({
                                         <Link
                                             key={picture._id}
                                             href={`/portfolio/${picture.slug}`}>
-                                            <div className='p-2'>
+                                            <motion.div initial={{opacity: 0, y: 50}} whileInView={{opacity: 1, y: 0}} transition={{duration: 0.7}} whileHover={{opacity: 0.5}} className='p-2'>
                                                 <Image
                                                     className='min-h-[300px] w-full min-w-[300px] border-3 border-moggle object-cover
                                                 transition duration-500 ease-in-out hover:scale-105'
@@ -66,7 +68,7 @@ const ImageGallery = ({
                                                     height={500}
                                                     priority
                                                 />
-                                            </div>
+                                            </motion.div>
                                         </Link>
                                     );
                                 })}

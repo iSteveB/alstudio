@@ -33,9 +33,12 @@ const Header = () => {
         }
     };
 
-    return isScrolled ? (
-        <header className='flex w-full items-center justify-between border-b-3 border-moggle bg-crema px-8 py-2 transition-all duration-300 ease-in-out md:px-16'>
-            <div className='lg:grow'>
+    return (
+        <header
+            className={`flex w-full items-center justify-between border-b-3 border-moggle bg-crema ${
+                isScrolled ? 'px-8 py-2' : 'p-8'
+            } transition-all duration-300 ease-in-out md:px-16`}>
+            <div className='lg:flex-1'>
                 <div className='lg:flex'>
                     <Navigation
                         showMenu={showMenu}
@@ -48,36 +51,11 @@ const Header = () => {
                     {showMenu ? <CloseButton /> : <BurgerMenu />}
                 </div>
             </div>
-            <div className='lg:grow'>
-                <Logo tailwindCSS='w-32'/>
+            <div className='lg:flex-1'>
+                <Logo tailwindCSS={isScrolled ? 'w-32' : undefined} />
             </div>
-            <div className='lg:grow'>
-                <SocialNetwork tailwindcss='hidden lg:flex flex-row justify-between lg:gap-10 gap-20' />
-                <ChatBubble />
-            </div>
-        </header>
-    ) : (
-        <header className='flex w-full items-center justify-between border-b-3 border-moggle bg-crema p-8 transition-all duration-300 ease-in-out md:px-16'>
-            <div className='lg:grow'>
-                <div className='lg:flex'>
-                    <Navigation
-                        showMenu={showMenu}
-                        setShowMenu={() => setshowMenu(false)}
-                    />
-                </div>
-                <div
-                    className='block cursor-pointer transition-all duration-300 ease-in-out hover:scale-125 lg:hidden'
-                    onClick={toggleMenu}>
-                    {showMenu ? <CloseButton /> : <BurgerMenu />}
-                </div>
-            </div>
-
-            <div className='lg:grow'>
-                <Logo />
-            </div>
-
-            <div className='lg:grow'>
-                <SocialNetwork tailwindcss='hidden lg:flex flex-row justify-between lg:gap-10 gap-20' />
+            <div className='lg:flex-1'>
+                <SocialNetwork tailwindcss='hidden lg:flex flex-row justify-around' />
                 <ChatBubble />
             </div>
         </header>
