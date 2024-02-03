@@ -2,17 +2,13 @@ import React from 'react';
 
 import Image, { StaticImageData } from 'next/image';
 
-interface ImageSectionContainerProps {
+interface PhotoCardProps {
     imgSrc: StaticImageData | string;
     imgAlt: string;
     border?: string;
 }
 
-const ImageSectionContainer: React.FC<ImageSectionContainerProps> = ({
-    imgSrc,
-    imgAlt,
-    border,
-}) => {
+const PhotoCard: React.FC<PhotoCardProps> = ({ imgSrc, imgAlt, border }) => {
     return (
         <div
             className={`hidden md:w-1/2 lg:block ${border} md:border-moggle lg:object-cover`}>
@@ -26,4 +22,4 @@ const ImageSectionContainer: React.FC<ImageSectionContainerProps> = ({
     );
 };
 
-export default ImageSectionContainer;
+export default PhotoCard;

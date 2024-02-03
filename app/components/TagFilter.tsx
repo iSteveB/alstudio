@@ -6,7 +6,7 @@ type TagFilterProps = {
 };
 
 const categories = [
-    { id: 'all', label: 'Tout voir' },
+    { id: 'all', label: 'Tout' },
     { id: 'pregnancy', label: 'Grossesse' },
     { id: 'child', label: 'Enfant' },
     { id: 'portrait', label: 'Portrait' },

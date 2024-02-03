@@ -1,5 +1,5 @@
 import React from 'react';
-import ImageGallery from '@/app/components/ImageGallery';
+import PhotosGallery from '@/app/components/PhotosGallery';
 import { fetchPictures } from '@/app/actions/fetchPictures';
 
 const Portfolio = async () => {
@@ -7,7 +7,7 @@ const Portfolio = async () => {
 
     return (
         <div>
-            <ImageGallery pictures={pictures} />
+            <PhotosGallery pictures={pictures} />
         </div>
     );
 };

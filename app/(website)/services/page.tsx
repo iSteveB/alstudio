@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 import Section from '@/app/components/Section';
 import Aside from '@/app/components/Aside';
 import Button from '@/app/components/Button';
-import ImageSectionContainer from '@/app/components/ImageSectionContainer';
+import PhotoCard from '@/app/components/PhotoCard';
 
 import pregnancy from '@/public/images/DSC_0620.webp';
 import child from '@/public/images/MTXX_MR20231128_212011762.webp';
@@ -37,7 +37,7 @@ const Services = () => {
                             initial={{ opacity: 0, y: -10 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5 }}
-                            className='grid grid-flow-col-dense grid-rows-3 gap-x-3 gap-y-4 lg:gap-x-10 lg:gap-y-8'>
+                            className='grid grid-flow-col-dense grid-rows-3 gap-x-3 gap-y-4 text-left lg:gap-x-10 lg:gap-y-8'>
                             <div>
                                 <h3 className='text-lg font-extrabold'>
                                     Séance Grossesse Douceur
@@ -120,7 +120,7 @@ const Services = () => {
                     state.toggleCategoryA ? 'Retour' : 'Choisir ma Séance'
                 }
                 handleClick={() => dispatch({ type: 'PREGNANCY' })}>
-                <ImageSectionContainer
+                <PhotoCard
                     imgSrc={pregnancy}
                     imgAlt={'Grossesse'}
                     border={'md:border-l-4'}
@@ -143,7 +143,7 @@ const Services = () => {
                             initial={{ opacity: 0, y: -10 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5 }}
-                            className='grid grid-flow-col-dense grid-rows-3 gap-x-3 gap-y-2 lg:gap-x-10 lg:gap-y-4'>
+                            className='grid grid-flow-col-dense grid-rows-3 gap-x-3 gap-y-2 text-left lg:gap-x-10 lg:gap-y-4'>
                             <div>
                                 <h3 className='text-lg font-extrabold'>
                                     Séance Nouveau-né
@@ -236,7 +236,7 @@ const Services = () => {
                     state.toggleCategoryB ? 'Retour' : 'Choisir ma Séance'
                 }
                 handleClick={() => dispatch({ type: 'CHILD' })}>
-                <ImageSectionContainer
+                <PhotoCard
                     imgSrc={child}
                     imgAlt={'Enfance'}
                     border={'md:border-r-4'}
@@ -259,7 +259,7 @@ const Services = () => {
                             initial={{ opacity: 0, y: -10 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5 }}
-                            className='grid grid-flow-col-dense grid-cols-1 grid-rows-2 gap-x-5 gap-y-4 lg:gap-x-24 lg:gap-y-8'>
+                            className='grid grid-flow-col-dense grid-cols-1 grid-rows-2 gap-x-5 gap-y-4 text-left lg:gap-x-24 lg:gap-y-8'>
                             <div>
                                 <h3 className='text-lg font-extrabold'>
                                     Séance Portrait Solo
@@ -322,7 +322,7 @@ const Services = () => {
                     state.toggleCategoryC ? 'Retour' : 'Choisir ma Séance'
                 }
                 handleClick={() => dispatch({ type: 'PORTRAIT' })}>
-                <ImageSectionContainer
+                <PhotoCard
                     imgSrc={portrait}
                     imgAlt={'Portrait'}
                     border={'md:border-l-4'}
@@ -345,28 +345,28 @@ const Services = () => {
                             initial={{ opacity: 0, y: -10 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5 }}
-                            className='flex flex-col gap-8'>
-                            <div>
+                            className='flex flex-col gap-14 text-left'>
+                            <div className='flex flex-col gap-2'>
                                 <h3 className='text-lg font-extrabold'>
-                                    Séance Mariage
+                                    Mariage
                                 </h3>
-
-                                <div className='grid grid-flow-row-dense grid-cols-2 grid-rows-2 gap-x-5 gap-y-4 lg:gap-x-24 lg:gap-y-8'>
+                                <div className='grid grid-flow-col-dense grid-cols-1 grid-rows-2 gap-x-5 gap-y-4 lg:gap-x-24 lg:gap-y-8'>
                                     <p>
                                         De la préparation de la Mariée au vin
                                         d&apos;honneur.
                                     </p>
+
+                                    <p>
+                                        De la préparation de la Mariée à la
+                                        pièce montée.
+                                    </p>
+
                                     <form action='/contact'>
                                         <Button
                                             text={'550 €'}
                                             type={'submit'}
                                         />
                                     </form>
-
-                                    <p>
-                                        De la préparation de la Mariée à la
-                                        pièce montée.
-                                    </p>
                                     <form action='/contact'>
                                         <Button
                                             text={'1 000 €'}
@@ -376,12 +376,12 @@ const Services = () => {
                                 </div>
                             </div>
 
-                            <div className='w-full'>
+                            <div className='flex w-full flex-col gap-4 text-left'>
                                 <h3 className='text-lg font-extrabold'>
                                     Séance Baptême & Communion
                                 </h3>
 
-                                <div className='grid grid-flow-row-dense items-center gap-x-5 gap-y-2 lg:gap-x-16 lg:gap-y-4'>
+                                <div className='grid grid-flow-col-dense grid-cols-1 grid-rows-2 items-center gap-x-5 gap-y-2 lg:gap-x-16 lg:gap-y-4'>
                                     <div>
                                         <h4>Forfait 1</h4>
 
@@ -416,13 +416,6 @@ const Services = () => {
                                         </details>
                                     </div>
 
-                                    <form action='/contact'>
-                                        <Button
-                                            text={'160 €'}
-                                            type={'submit'}
-                                        />
-                                    </form>
-
                                     <div>
                                         <h4>Forfait 2</h4>
                                         <details className='hover:cursor-pointer'>
@@ -456,7 +449,13 @@ const Services = () => {
                                             </motion.ul>
                                         </details>
                                     </div>
-                                    
+                                    <form action='/contact'>
+                                        <Button
+                                            text={'160 €'}
+                                            type={'submit'}
+                                        />
+                                    </form>
+
                                     <form action='/contact'>
                                         <Button
                                             text={'250 €'}
@@ -473,7 +472,7 @@ const Services = () => {
                     state.toggleCategoryD ? 'Retour' : 'Choisir ma Séance'
                 }
                 handleClick={() => dispatch({ type: 'EVENT' })}>
-                <ImageSectionContainer
+                <PhotoCard
                     imgSrc={event}
                     imgAlt={'Événements'}
                     border={'md:border-r-4'}

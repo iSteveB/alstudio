@@ -10,7 +10,7 @@ import Aside from '../components/Aside';
 import { gabriela } from '../ui/font';
 import { motion } from 'framer-motion';
 import { CATEGORIES } from '../data/categories';
-import ImageSectionContainer from '../components/ImageSectionContainer';
+import PhotoCard from '../components/PhotoCard';
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +22,7 @@ const Home = () => {
                 buttonText='Réserver une Séance'
                 buttonLink='/contact'
                 reverse={false}>
-                <ImageSectionContainer
+                <PhotoCard
                     imgSrc={pic}
                     imgAlt='Shooting'
                     border='md:border-l-4'
@@ -118,7 +118,7 @@ const Home = () => {
                         </motion.div>
                     )
                 }>
-                <ImageSectionContainer
+                <PhotoCard
                     imgSrc={pic2}
                     imgAlt='Déborah Tétéa'
                     border={'md:border-r-4'}
