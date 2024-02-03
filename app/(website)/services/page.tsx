@@ -42,7 +42,7 @@ const Services = () => {
                                 <h3 className='text-lg font-extrabold'>
                                     Séance Grossesse Douceur
                                 </h3>
-                                <details className='z-30 hover:cursor-pointer'>
+                                <details className='relative z-30 hover:cursor-pointer'>
                                     <summary>
                                         1h30 | 15 photos + 15 photos NB
                                     </summary>
@@ -51,7 +51,7 @@ const Services = () => {
                                         initial={{ opacity: 0, y: -10 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.5 }}
-                                        className='absolute left-0.5 border-2 border-moggle bg-crema p-3 text-sm lg:left-10'>
+                                        className='absolute w-auto min-w-96 border-2 border-moggle bg-crema p-3 text-sm'>
                                         <li>6€ par photo supplémentaire.</li>
                                         <li>
                                             Seule, en couple ou en famille (5
@@ -79,7 +79,7 @@ const Services = () => {
                                         initial={{ opacity: 0, y: -10 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.5 }}
-                                        className='absolute left-0.5 border-2 border-moggle bg-crema p-3 text-sm lg:left-10'>
+                                        className='absolute w-auto min-w-96 border-2 border-moggle bg-crema p-3 text-sm'>
                                         <li>6€ par photo supplémentaire.</li>
                                         <li>
                                             Seule, en couple ou en famille (5
@@ -148,7 +148,7 @@ const Services = () => {
                                 <h3 className='text-lg font-extrabold'>
                                     Séance Nouveau-né
                                 </h3>
-                                <details className='z-30 hover:cursor-pointer'>
+                                <details className='relative z-30 hover:cursor-pointer'>
                                     <summary>
                                         1h30 | 15 photos + 15 photos NB
                                     </summary>
@@ -156,7 +156,7 @@ const Services = () => {
                                         initial={{ opacity: 0, y: -10 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.5 }}
-                                        className='absolute left-0.5 border-2 border-moggle bg-crema p-3 text-sm lg:left-10'>
+                                        className='absolute w-auto min-w-96 border-2 border-moggle bg-crema p-3 text-sm'>
                                         <li>6€ par photos supplémentaire.</li>
                                         <li>
                                             Seul(e), fratrie ou en famille (5
@@ -181,7 +181,7 @@ const Services = () => {
                                         initial={{ opacity: 0, y: -10 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.5 }}
-                                        className='absolute left-0.5 border-2 border-moggle bg-crema p-3 text-sm lg:left-10'>
+                                        className='absolute w-auto min-w-96 border-2 border-moggle bg-crema p-3 text-sm'>
                                         <li>6€ par photo supplémentaire.</li>
                                         <li>
                                             Seul(e), fratrie ou en famille (5
@@ -207,7 +207,7 @@ const Services = () => {
                                         initial={{ opacity: 0, y: -10 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.5 }}
-                                        className='absolute left-0.5 border-2 border-moggle bg-crema p-3 text-sm lg:left-10'>
+                                        className='absolute w-auto min-w-96 border-2 border-moggle bg-crema p-3 text-sm'>
                                         <li>6€ par photo supplémentaire.</li>
                                         <li>Seul(e).</li>
                                         <li>
@@ -264,7 +264,7 @@ const Services = () => {
                                 <h3 className='text-lg font-extrabold'>
                                     Séance Portrait Solo
                                 </h3>
-                                <details className='z-30 hover:cursor-pointer'>
+                                <details className='relative z-30 hover:cursor-pointer'>
                                     <summary>
                                         1h30 | 15 photos + 15 photos NB
                                     </summary>
@@ -272,7 +272,7 @@ const Services = () => {
                                         initial={{ opacity: 0, y: -10 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.5 }}
-                                        className='absolute left-0.5 border-2 border-moggle bg-crema p-3 text-sm lg:left-10'>
+                                        className='absolute w-auto min-w-96 border-2 border-moggle bg-crema p-3 text-sm'>
                                         <li>6€ par photos supplémentaire.</li>
                                         <li>
                                             Différentes tenues peuvent être
@@ -293,7 +293,7 @@ const Services = () => {
                                         initial={{ opacity: 0, y: -10 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.5 }}
-                                        className='absolute left-0.5 border-2 border-moggle bg-crema p-3 text-sm lg:left-10'>
+                                        className='absolute w-auto min-w-96 border-2 border-moggle bg-crema p-3 text-sm'>
                                         <li>6€ par photos supplémentaire.</li>
                                         <li>
                                             En couple, famille ou amis (5 pers
@@ -398,7 +398,7 @@ const Services = () => {
                                                     y: 0,
                                                 }}
                                                 transition={{ duration: 0.5 }}
-                                                className='absolute left-0.5 border-2 border-moggle bg-crema p-3 text-sm lg:left-10'>
+                                                className='absolute w-auto min-w-96 border-2 border-moggle bg-crema p-3 text-sm'>
                                                 <li>
                                                     6€ par photos
                                                     supplémentaire.
@@ -432,7 +432,7 @@ const Services = () => {
                                                     y: 0,
                                                 }}
                                                 transition={{ duration: 0.5 }}
-                                                className='absolute left-0.5 border-2 border-moggle bg-crema p-3 text-sm lg:left-10'>
+                                                className='absolute w-auto min-w-96 border-2 border-moggle bg-crema p-3 text-sm'>
                                                 <li>
                                                     6€ par photos
                                                     supplémentaire.

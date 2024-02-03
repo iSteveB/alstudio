@@ -16,7 +16,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
                         alt={picture[0].image.alt}
                         width={picture[0].image.asset.metadata.dimensions.width}
                         height={picture[0].image.asset.metadata.dimensions.height}
-                        objectFit='fit'
+                        objectFit='cover'
                         />
                         
                 </Modal>
