@@ -5,7 +5,7 @@ import SocialNetwork from './SocialNetwork';
 
 const Footer = () => {
     return (
-        <div className='flex w-full items-center justify-between bg-crema px-16 py-8'>
+        <div className='flex w-full items-center justify-center bg-crema px-16 py-8 md:justify-between'>
             <div className='flex flex-col items-center'>
                 <Logo />
                 <small className='text-xs'>
