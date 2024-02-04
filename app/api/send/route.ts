@@ -1,6 +1,7 @@
 import { EmailTemplate } from '../../components/EmailTemplate';
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
+import { TradProps } from '@/types/emails';
 
 interface BodyParams {
     firstName: string;
@@ -10,6 +11,12 @@ interface BodyParams {
     packageType: string;
     message: string;
 }
+
+const objectTrad: TradProps = {
+  book: 'réserver une séance',
+  opinion: 'laisser un avis',
+  question: 'poser une question',
+};
 
 const resend = new Resend(process.env.RESEND_API_KEY as string);
 
@@ -21,7 +28,7 @@ export async function POST(request: Request) {
       const { data, error } = await resend.emails.send({
         from: 'contact@alstudiophotos.com',
         to: ['basse.steve@hotmail.com'],
-        subject: object,
+        subject: objectTrad[object].charAt(0).toUpperCase() + objectTrad[object].slice(1),
         react: EmailTemplate({
             firstName: firstName,
             lastName: lastName,

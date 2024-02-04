@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { EmailTemplateProps, TradProps } from '@/types/emails';
 import {
     Body,
     Container,
@@ -11,21 +11,8 @@ import {
     Row,
     Section,
     Text,
-    Hr
+    Hr,
 } from '@react-email/components';
-
-interface EmailTemplateProps {
-    firstName: string;
-    lastName: string;
-    email: string;
-    object: string;
-    packageType?: string;
-    message: string;
-}
-
-interface TradProps {
-    [key: string]: string;
-}
 
 const packageTrad: TradProps = {
     newborn: 'Nouveau-né - 200€',
@@ -49,6 +36,10 @@ const objectTrad: TradProps = {
     question: 'poser une question',
 };
 
+const baseUrl = process.env.VERCEL_URL
+  ? `${process.env.VERCEL_URL}`
+  : "";
+
 export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
     firstName,
     lastName,
@@ -64,7 +55,12 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
             <Body style={main}>
                 <Container>
                     <Section style={logo}>
-                        <Img src={'/public/images/alstudio.png'} />
+                        <Img
+                            src={`${baseUrl}/images/alstudio.png`}
+                            alt='AL Studio Banner'
+                            width={600}
+                            height={200}
+                        />
                     </Section>
 
                     <Section style={content}>
@@ -72,12 +68,13 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
                             <Column>
                                 <Heading
                                     style={{
+                                        padding: '20px 0',
                                         fontSize: 32,
                                         fontWeight: 'bold',
                                         textAlign: 'center',
                                     }}>
                                     Nouveau message de{' '}
-                                    {firstName + ' ' + lastName},
+                                    {firstName + ' ' + lastName}
                                 </Heading>
                                 <Hr style={hr} />
                                 <Heading
@@ -96,16 +93,30 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
 
                                 <Text style={paragraph}>
                                     {packageType && (
-                                        <p> <strong>Prestation choisie</strong> : {packageTrad[packageType]}</p>
+                                        <p>
+                                            {' '}
+                                            <strong>
+                                                Prestation choisie
+                                            </strong>{' '}
+                                            : {packageTrad[packageType]}
+                                        </p>
                                     )}
                                 </Text>
                                 <Text style={{ ...paragraph, marginTop: -5 }}>
                                     {message && (
-                                        <p><strong>Message</strong> : {message.trim()}</p>
+                                        <p>
+                                            <strong>Message</strong> :{' '}
+                                            {message.trim()}
+                                        </p>
                                     )}
                                 </Text>
                                 <Text style={{ ...paragraph, marginTop: -5 }}>
-                                    {email && <p> <strong>Email</strong> : {email}</p>}
+                                    {email && (
+                                        <p>
+                                            {' '}
+                                            <strong>Email</strong> : {email}
+                                        </p>
+                                    )}
                                 </Text>
                             </Column>
                         </Row>
@@ -143,6 +154,6 @@ const boxInfos = {
 };
 
 const hr = {
-  borderColor: "#e6ebf1",
-  margin: "20px 0",
+    borderColor: '#e6ebf1',
+    margin: '20px 0',
 };

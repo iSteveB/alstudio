@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { gabriela } from '../ui/font';
 import Button from './Button';
+import toast from 'react-hot-toast';
 
 const Form = () => {
     const [booking, setBooking] = useState('book');
@@ -10,7 +11,7 @@ const Form = () => {
         lastName: '',
         email: '',
         object: 'book',
-        packageType: '',
+        packageType: 'newborn',
         message: '',
     });
 
@@ -27,6 +28,11 @@ const Form = () => {
             });
 
             if (response.ok) {
+                toast.success(
+                    `Merci ${data.firstName.trim()} ! Votre message a bien été envoyé ! À très vite !`,
+                    { duration: 4000 }
+                );
+
                 setData({
                     firstName: '',
                     lastName: '',
@@ -35,12 +41,11 @@ const Form = () => {
                     packageType: 'newborn',
                     message: '',
                 });
-                console.log('Votre message a bien été envoyé ! À très vite !');
-                //toast.success('Votre message a bien été envoyé ! À très vite !');
+                console.log('Message envoyé !');
             }
         } catch (error) {
             console.log(error);
-            //toast.error('Une erreur est survenue, veuillez réessayer.');
+            toast.error('Une erreur est survenue, veuillez réessayer.');
         }
     };
 
@@ -61,7 +66,10 @@ const Form = () => {
                             id='lastName'
                             required
                             onChange={(e) =>
-                                setData({ ...data, lastName: e.target.value })
+                                setData({
+                                    ...data,
+                                    lastName: e.target.value.trim(),
+                                })
                             }
                             value={data.lastName}
                         />
@@ -75,7 +83,10 @@ const Form = () => {
                             id='firstName'
                             required
                             onChange={(e) =>
-                                setData({ ...data, firstName: e.target.value })
+                                setData({
+                                    ...data,
+                                    firstName: e.target.value.trim(),
+                                })
                             }
                             value={data.firstName}
                         />
@@ -90,7 +101,7 @@ const Form = () => {
                         id='email'
                         required
                         onChange={(e) =>
-                            setData({ ...data, email: e.target.value })
+                            setData({ ...data, email: e.target.value.trim() })
                         }
                         value={data.email}
                         className='h-12 w-full border border-lion px-3 py-2 outline-none'
@@ -190,7 +201,7 @@ const Form = () => {
                         id='message'
                         placeholder='Dites moi tout...'
                         onChange={(e) =>
-                            setData({ ...data, message: e.target.value })
+                            setData({ ...data, message: e.target.value.trim() })
                         }
                         value={data.message}
                         rows={5}
@@ -205,8 +216,8 @@ const Form = () => {
                     />
                     <label htmlFor='consent'>
                         En cochant cette case, j&apos;accepte que mes données
-                        soient concervées et réutilisées pour me contacter
-                        exclusivement dans le cadre de ma demande.
+                        soient concervées et réutilisées afin de me contacter
+                        uniquement dans le cadre de ma demande.
                     </label>
                 </div>
                 <div className='flex items-center justify-center'>

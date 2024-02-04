@@ -3,6 +3,7 @@ import { amiko } from '../ui/font';
 import '../globals.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { Toaster } from 'react-hot-toast';
 
 export const metadata: Metadata = {
     title: 'AL Studio Photo',
@@ -19,6 +20,7 @@ export default function RootLayout({
         <html className='m-0 size-full' lang='fr'>
             <body
                 className={`${amiko.className} flex h-full flex-col bg-crema`}>
+                <Toaster position='bottom-right' reverseOrder={true} />
                 <div className='fixed top-0 z-50 w-full'>
                     <Header />
                 </div>
