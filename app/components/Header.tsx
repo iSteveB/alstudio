@@ -36,7 +36,7 @@ const Header = () => {
     return (
         <header
             className={`flex w-full items-center justify-between border-b-3 border-moggle bg-crema ${
-                isScrolled ? 'px-8 py-2' : 'p-8'
+                isScrolled ? 'px-8 py-2' : 'px-3 py-6'
             } transition-all duration-300 ease-in-out md:px-16`}>
             <div className='lg:flex-1'>
                 <div className='lg:flex'>
@@ -52,7 +52,7 @@ const Header = () => {
                 </div>
             </div>
             <div className='lg:flex-1'>
-                <Logo tailwindCSS={isScrolled ? 'w-32' : undefined} />
+                <Logo tailwindCSS={isScrolled ? 'w-32' : 'h-16 sm:h-20'} />
             </div>
             <div className='lg:flex-1'>
                 <SocialNetwork tailwindcss='hidden lg:flex flex-row justify-around' />

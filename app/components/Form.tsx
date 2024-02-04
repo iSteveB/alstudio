@@ -4,6 +4,15 @@ import { gabriela } from '../ui/font';
 import Button from './Button';
 import toast from 'react-hot-toast';
 
+interface FormData {
+    firstName: string;
+    lastName: string;
+    email: string;
+    object: string;
+    packageType: string;
+    message: string;
+}
+
 const Form = () => {
     const [booking, setBooking] = useState('book');
     const [data, setData] = useState({
@@ -15,16 +24,67 @@ const Form = () => {
         message: '',
     });
 
+    const sanitizeState = (inputState: FormData): FormData => {
+        const sanitizedState: FormData = { ...inputState };
+    
+        const sanitizeField = (field: keyof FormData) => {
+            sanitizedState[field] = sanitizedState[field].trim();
+    
+            if (field === 'email' && !isValidEmail(sanitizedState[field])) {
+                toast.error('Veuillez entrer une adresse mail valide.');
+                throw new Error('Invalid email');
+            }
+
+            if (field === 'message' && sanitizedState[field].length < 10) {
+                toast.error('Votre message doit contenir au moins 10 caractères.');
+                throw new Error('Message too short');
+            }
+
+            if (field === 'packageType' && sanitizedState[field] === '') {
+                toast.error('Veuillez sélectionner une prestation.');
+                throw new Error('No package selected');
+            }
+
+            if (field === 'object' && sanitizedState[field] === '') {
+                toast.error('Veuillez spécifier votre souhait.');
+                throw new Error('No object selected');
+            }
+            
+            if (field === 'lastName' && !isValidName(sanitizedState[field])) {
+                toast.error('Veuillez entrer un nom valide.');
+                throw new Error('Invalid last name');
+            }
+            
+            if (field === 'firstName' && !isValidName(sanitizedState[field])) {
+                toast.error('Veuillez entrer un prénom valide.');
+                throw new Error('Invalid first name');
+            }
+        };
+    
+        Object.keys(sanitizedState).forEach((field) => sanitizeField(field as keyof FormData));
+    
+        return sanitizedState;
+    };
+
+    const isValidName = (name: string): boolean => {
+        return /^[a-zA-Z\-]+$/
+        .test(name);
+    };
+    const isValidEmail = (email: string): boolean => {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    };
+
     const handleFormData = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         try {
+            
             const response = await fetch('/api/send', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(data),
+                body: JSON.stringify(sanitizeState(data)),
             });
 
             if (response.ok) {
@@ -64,11 +124,11 @@ const Form = () => {
                             type='text'
                             name='lastName'
                             id='lastName'
-                            required
+                            
                             onChange={(e) =>
                                 setData({
                                     ...data,
-                                    lastName: e.target.value.trim(),
+                                    lastName: e.target.value,
                                 })
                             }
                             value={data.lastName}
@@ -81,11 +141,11 @@ const Form = () => {
                             type='text'
                             name='firstName'
                             id='firstName'
-                            required
+                            
                             onChange={(e) =>
                                 setData({
                                     ...data,
-                                    firstName: e.target.value.trim(),
+                                    firstName: e.target.value,
                                 })
                             }
                             value={data.firstName}
@@ -99,9 +159,9 @@ const Form = () => {
                         type='email'
                         name='email'
                         id='email'
-                        required
+                        
                         onChange={(e) =>
-                            setData({ ...data, email: e.target.value.trim() })
+                            setData({ ...data, email: e.target.value })
                         }
                         value={data.email}
                         className='h-12 w-full border border-lion px-3 py-2 outline-none'
@@ -135,7 +195,7 @@ const Form = () => {
                                         packageType: e.target.value,
                                     })
                                 }
-                                required>
+                                >
                                 <optgroup label='Choisir une prestation'>
                                     <option disabled>-- Enfants --</option>
                                     <option value='newborn'>
@@ -201,7 +261,7 @@ const Form = () => {
                         id='message'
                         placeholder='Dites moi tout...'
                         onChange={(e) =>
-                            setData({ ...data, message: e.target.value.trim() })
+                            setData({ ...data, message: e.target.value })
                         }
                         value={data.message}
                         rows={5}
