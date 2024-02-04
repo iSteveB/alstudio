@@ -24,7 +24,7 @@ export default function RootLayout({
                 <div className='fixed top-0 z-50 w-full'>
                     <Header />
                 </div>
-                <div className='mt-[145px] flex-1 scroll-smooth'>
+                <div className='mt-[130px] flex-1 scroll-smooth'>
                     {children}
                 </div>
 

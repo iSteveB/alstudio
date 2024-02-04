@@ -39,18 +39,18 @@ const Home = () => {
                     </h2>
                     <span className='relative -z-10 h-1 w-72 bg-moggle before:absolute before:left-[-5px] before:top-[-5.7px] before:-z-10 before:size-4 before:rotate-45 before:bg-moggle after:absolute after:right-[-5px] after:top-[-5.7px] after:-z-10 after:size-4 after:rotate-45 after:bg-moggle md:w-96'></span>
                 </div>
-                <motion.div
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                    className='my-12 flex flex-wrap items-center justify-center gap-20 lg:my-32'>
+                <div className='my-12 flex flex-wrap items-center justify-center gap-20 lg:my-32'>
                     {CATEGORIES.map(({ id, src, alt, href, title }) => {
                         return (
                             <Link
                                 className='flex flex-col items-center gap-2 transition-all duration-300 ease-in-out hover:scale-105'
                                 href={href}
                                 key={id}>
-                                <div className='border-3 border-moggle'>
+                                <motion.div
+                                    initial={{ opacity: 0, y: 50 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.5 }}
+                                    className='border-3 border-moggle'>
                                     <Image
                                         src={src}
                                         alt={alt}
@@ -58,15 +58,18 @@ const Home = () => {
                                         width={263}
                                         height={330}
                                     />
-                                </div>
-                                <h3
+                                </motion.div>
+                                <motion.h3
+                                    initial={{ opacity: 0, y: 50 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.5 }}
                                     className={`${gabriela.className} text-xl font-bold uppercase`}>
                                     {title}
-                                </h3>
+                                </motion.h3>
                             </Link>
                         );
                     })}
-                </motion.div>
+                </div>
             </section>
             <Aside />
             <Section
