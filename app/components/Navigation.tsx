@@ -1,7 +1,7 @@
 'use client';
-import React, { useEffect, useState } from 'react';
 import { gabriela } from '../ui/font';
 import Link from 'next/link';
+import useScroll from '../hooks/useScroll';
 
 interface Props {
     showMenu?: boolean;
@@ -38,23 +38,9 @@ const Navigation: React.FC<Props> = ({
     setShowMenu,
 }) => {
 
-    const [isScrolled, setScrolled] = useState(false);
+    const isScrolled = useScroll(250);
     
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll, { passive: true });
 
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
-    const handleScroll = () => {
-        if (window.scrollY > 250) {
-            setScrolled(true);
-        } else {
-            setScrolled(false);
-        }
-    };
     return (
         <nav className={`${gabriela.className} uppercase ${tailwindCSS}`}>
             <ul

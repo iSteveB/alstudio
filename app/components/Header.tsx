@@ -8,29 +8,14 @@ import SocialNetwork from './SocialNetwork';
 import BurgerMenu from '../ui/svg/BurgerMenu';
 import CloseButton from '../ui/svg/CloseButton';
 import ChatBubble from '../ui/svg/ChatBubble';
+import useScroll from '../hooks/useScroll';
 
 const Header = () => {
     const [showMenu, setshowMenu] = useState(false);
-    const [isScrolled, setScrolled] = useState(false);
+    const isScrolled = useScroll(250);
 
     const toggleMenu = () => {
         setshowMenu(!showMenu);
-    };
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll, { passive: true });
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
-    const handleScroll = () => {
-        if (window.scrollY > 250) {
-            setScrolled(true);
-        } else {
-            setScrolled(false);
-        }
     };
 
     return (

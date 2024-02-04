@@ -1,27 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { links } from '@/app/data/links';
 import Link from 'next/link';
 import { gabriela } from '../font';
+import useScroll from '@/app/hooks/useScroll';
 
 function ChatBubble() {
     const [showSocialNetwork, setShowSocialNetwork] = useState(false);
-    const [isScrolled, setScrolled] = useState(false);
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll, { passive: true });
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
-    const handleScroll = () => {
-        if (window.scrollY > 250) {
-            setScrolled(true);
-        } else {
-            setScrolled(false);
-        }
-    };
+    const isScrolled = useScroll(250);
 
     return (
         <div className='lg:hidden'>

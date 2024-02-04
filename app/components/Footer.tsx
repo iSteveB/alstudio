@@ -2,7 +2,6 @@ import React from 'react';
 import Logo from '../ui/svg/Logo';
 import Navigation from './Navigation';
 import SocialNetwork from './SocialNetwork';
-import GoTopArrow from '../ui/svg/GoTopArrow';
 
 const Footer = () => {
     return (
@@ -16,7 +15,6 @@ const Footer = () => {
             </div>
             <Navigation tailwindCSS='flex flex-row justify-between gap-10' />
             <SocialNetwork tailwindcss='md:flex flex-row justify-between gap-10 hidden' />
-            <GoTopArrow />
         </div>
     );
 };
