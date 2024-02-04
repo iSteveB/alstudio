@@ -71,7 +71,7 @@ const Services = () => {
                                 <h3 className='text-lg font-extrabold'>
                                     Séance Maman Détente
                                 </h3>
-                                <details className='hover:cursor-pointer'>
+                                <details className='relative hover:cursor-pointer'>
                                     <summary>
                                         2h30 | 30 photos + 30 photos NB
                                     </summary>
@@ -79,7 +79,7 @@ const Services = () => {
                                         initial={{ opacity: 0, y: -10 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.5 }}
-                                        className='absolute w-auto min-w-96 border-2 border-moggle bg-crema p-3 text-sm'>
+                                        className='absolute min-w-0 border-2 border-moggle bg-crema p-3 text-sm sm:min-w-96'>
                                         <li>6€ par photo supplémentaire.</li>
                                         <li>
                                             Seule, en couple ou en famille (5
@@ -148,7 +148,7 @@ const Services = () => {
                                 <h3 className='text-lg font-extrabold'>
                                     Séance Nouveau-né
                                 </h3>
-                                <details className='relative z-30 hover:cursor-pointer'>
+                                <details className='relative z-40 hover:cursor-pointer'>
                                     <summary>
                                         1h30 | 15 photos + 15 photos NB
                                     </summary>
@@ -156,7 +156,7 @@ const Services = () => {
                                         initial={{ opacity: 0, y: -10 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.5 }}
-                                        className='absolute w-auto min-w-96 border-2 border-moggle bg-crema p-3 text-sm'>
+                                        className='absolute min-w-0 border-2 border-moggle bg-crema p-3 text-sm sm:min-w-96'>
                                         <li>6€ par photos supplémentaire.</li>
                                         <li>
                                             Seul(e), fratrie ou en famille (5
@@ -173,7 +173,7 @@ const Services = () => {
                                 <h3 className='text-lg font-extrabold'>
                                     Séance Grand Enfant
                                 </h3>
-                                <details className='hover:cursor-pointer'>
+                                <details className='relative z-30 hover:cursor-pointer'>
                                     <summary>
                                         1h30 | 15 photos + 15 photos NB
                                     </summary>
@@ -181,7 +181,7 @@ const Services = () => {
                                         initial={{ opacity: 0, y: -10 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.5 }}
-                                        className='absolute w-auto min-w-96 border-2 border-moggle bg-crema p-3 text-sm'>
+                                        className='absolute min-w-0 border-2 border-moggle bg-crema p-3 text-sm sm:min-w-96'>
                                         <li>6€ par photo supplémentaire.</li>
                                         <li>
                                             Seul(e), fratrie ou en famille (5
@@ -199,7 +199,7 @@ const Services = () => {
                                     Séance &#34;Smash The Cake&#34; / <br />
                                     Bain de lait
                                 </h3>
-                                <details className='hover:cursor-pointer'>
+                                <details className='relative hover:cursor-pointer'>
                                     <summary>
                                         1h30 | 10 photos + 10 photos NB
                                     </summary>
@@ -207,7 +207,7 @@ const Services = () => {
                                         initial={{ opacity: 0, y: -10 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.5 }}
-                                        className='absolute w-auto min-w-96 border-2 border-moggle bg-crema p-3 text-sm'>
+                                        className='absolute min-w-0 border-2 border-moggle bg-crema p-3 text-sm sm:min-w-96'>
                                         <li>6€ par photo supplémentaire.</li>
                                         <li>Seul(e).</li>
                                         <li>
@@ -272,7 +272,7 @@ const Services = () => {
                                         initial={{ opacity: 0, y: -10 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.5 }}
-                                        className='absolute w-auto min-w-96 border-2 border-moggle bg-crema p-3 text-sm'>
+                                        className='absolute min-w-0 border-2 border-moggle bg-crema p-3 text-sm sm:min-w-96'>
                                         <li>6€ par photos supplémentaire.</li>
                                         <li>
                                             Différentes tenues peuvent être
@@ -285,7 +285,7 @@ const Services = () => {
                                 <h3 className='text-lg font-extrabold'>
                                     Séance Portrait Groupe
                                 </h3>
-                                <details className='hover:cursor-pointer'>
+                                <details className='relative hover:cursor-pointer'>
                                     <summary>
                                         1h30 | 15 photos + 15 photos NB
                                     </summary>
@@ -293,7 +293,7 @@ const Services = () => {
                                         initial={{ opacity: 0, y: -10 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.5 }}
-                                        className='absolute w-auto min-w-96 border-2 border-moggle bg-crema p-3 text-sm'>
+                                        className='absolute min-w-0 border-2 border-moggle bg-crema p-3 text-sm sm:min-w-96'>
                                         <li>6€ par photos supplémentaire.</li>
                                         <li>
                                             En couple, famille ou amis (5 pers
@@ -385,7 +385,7 @@ const Services = () => {
                                     <div>
                                         <h4>Forfait 1</h4>
 
-                                        <details className='z-20 hover:cursor-pointer'>
+                                        <details className='relative z-40 hover:cursor-pointer'>
                                             <summary>
                                                 Cérémonie religieuse ou civil.
                                                 <br />
@@ -398,7 +398,7 @@ const Services = () => {
                                                     y: 0,
                                                 }}
                                                 transition={{ duration: 0.5 }}
-                                                className='absolute w-auto min-w-96 border-2 border-moggle bg-crema p-3 text-sm'>
+                                                className='absolute min-w-0 border-2 border-moggle bg-crema p-3 text-sm sm:min-w-96'>
                                                 <li>
                                                     6€ par photos
                                                     supplémentaire.
@@ -418,7 +418,7 @@ const Services = () => {
 
                                     <div>
                                         <h4>Forfait 2</h4>
-                                        <details className='hover:cursor-pointer'>
+                                        <details className='relative hover:cursor-pointer'>
                                             <summary>
                                                 Cérémonie religieuse ou civil.
                                                 <br />
@@ -432,7 +432,7 @@ const Services = () => {
                                                     y: 0,
                                                 }}
                                                 transition={{ duration: 0.5 }}
-                                                className='absolute w-auto min-w-96 border-2 border-moggle bg-crema p-3 text-sm'>
+                                                className='absolute min-w-0 border-2 border-moggle bg-crema p-3 text-sm sm:min-w-96'>
                                                 <li>
                                                     6€ par photos
                                                     supplémentaire.
