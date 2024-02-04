@@ -5,7 +5,6 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Toaster } from 'react-hot-toast';
 import GoTopArrow from '../ui/svg/GoTopArrow';
-import useScroll from '../hooks/useScroll';
 
 export const metadata: Metadata = {
     title: 'AL Studio Photo',
@@ -27,7 +26,7 @@ export default function RootLayout({
                 <div className='fixed top-0 z-50 w-full'>
                     <Header />
                 </div>
-                <div className='mt-[130px] flex-1 scroll-smooth'>
+                <div className='mt-[112px] flex-1 scroll-smooth sm:mt-[130px]'>
                     {children}
                     <div className='fixed bottom-6 right-6'>
                         <GoTopArrow />

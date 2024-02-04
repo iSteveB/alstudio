@@ -34,7 +34,7 @@ function ChatBubble() {
                 className={`uppercase ${gabriela.className} ${
                     showSocialNetwork
                         ? `fixed left-0 ${
-                              isScrolled ? 'top-[78px]' : 'top-[146px]'
+                              isScrolled ? 'top-[78px]' : 'top-[115px] sm:top-[131px]'
                           } z-10 h-screen w-full flex-col bg-crema pt-24`
                         : 'bottom-0 hidden flex-row items-center gap-6 transition lg:flex'
                 } `}>
