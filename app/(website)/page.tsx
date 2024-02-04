@@ -84,33 +84,38 @@ const Home = () => {
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5 }}
-                            className='mx-6 flex flex-col gap-2 xl:ml-0 xl:mr-10'>
-                            <p className='text-lg text-moggle'>
-                                Hello, moi c&apos;est Déborah, maman de deux
+                            className='mx-6 flex flex-col gap-3 text-lg text-moggle xl:ml-0 xl:mr-10'>
+                            <p>
+                                Hello, moi c&apos;est{' '}
+                                <strong>Déborah Tetea</strong>, maman de deux
                                 petits garçons.
                             </p>
-                            <p className='text-lg text-moggle'>
-                                La photographie est une véritable passion pour
-                                moi, et je suis également très manuelle depuis
-                                mon enfance.{' '}
+                            <p>
+                                La <strong>photographie</strong> est une
+                                véritable passion pour moi, et je suis également
+                                très manuelle depuis mon enfance.{' '}
                             </p>
                             <p>
                                 Depuis toujours, je suis une personne
                                 polyvalente, pratiquant le dessin, la peinture,
                                 la couture, et bien d&apos;autres domaines
                                 créatifs.
-                                <br />
-                                Pourquoi la photo? En tant que maman louve,
-                                j&apos;apprécie capturer ces moments hors du
-                                temps. Quoi de plus beau que de mettre ces
-                                instants sur pause, que ce soit lors de
-                                cérémonies, de grossesses ou de naissances?{' '}
-                                <br /> La photographie va bien au-delà de la
-                                simple capture d&apos;images, elle me permet de
-                                venir à votre rencontre et de partager un bout
-                                de votre parcours de vie.
                             </p>
-                            <p className='text-lg text-moggle'>
+                            <p>
+                                Pourquoi la <strong>photo</strong> ? En tant que
+                                maman louve, j&apos;apprécie capturer ces
+                                moments hors du temps. Quoi de plus beau que de
+                                mettre ces instants sur pause, que ce soit lors
+                                de{' '}
+                                <strong>cérémonies</strong>, de{' '}
+                                <strong>grossesses</strong> ou de{' '}
+                                <strong>naissances</strong> ? <br /> La
+                                photographie va bien au-delà de la simple{' '}
+                                <strong>capture d&apos;images</strong>, elle me
+                                permet de venir à votre rencontre et de partager
+                                un bout de votre parcours de vie.
+                            </p>
+                            <p>
                                 Je serai ravie de vous rencontrer et de vous
                                 accompagner dans vos projets. Et n&apos;oubliez
                                 pas, la beauté est dans les yeux de celui qui
