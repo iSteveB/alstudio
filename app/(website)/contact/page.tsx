@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React from 'react';
 import Form from '../../components/Form';
 import Section from '../../components/Section';
@@ -27,21 +27,33 @@ const Contact = () => {
                             mes différents réseaux.
                         </p>
                         <div className='mt-5 flex w-full flex-wrap justify-center gap-5 md:mx-auto lg:justify-start'>
-                            <Button
-                                text='Instagram'
-                                type='button'
-                                img={<Instagram color='#F4EBE2' />}
-                            />
-                            <Button
-                                text='TikTok'
-                                type='button'
-                                img={<Tiktok color='#F4EBE2' />}
-                            />
-                            <Button
-                                text='Facebook'
-                                type='button'
-                                img={<Facebook color='#F4EBE2' />}
-                            />
+                            <form
+                                action='https://instagram.com/alstudiophoto?igshid=NGVhN2U2NjQ0Yg=='
+                                target='_blank'>
+                                <Button
+                                    text='Instagram'
+                                    type='submit'
+                                    img={<Instagram color='#F4EBE2' />}
+                                />
+                            </form>
+                            <form
+                                action='https://www.tiktok.com/@a.l.studiophotos?_t=8gS9kIGYT8C&_r=1'
+                                target='_blank'>
+                                <Button
+                                    text='TikTok'
+                                    type='submit'
+                                    img={<Tiktok color='#F4EBE2' />}
+                                />
+                            </form>
+                            <form
+                                action='https://www.facebook.com/rehaussementdecilsbydeborah'
+                                target='_blank'>
+                                <Button
+                                    text='Facebook'
+                                    type='submit'
+                                    img={<Facebook color='#F4EBE2' />}
+                                />
+                            </form>
                         </div>
                     </>
                 }

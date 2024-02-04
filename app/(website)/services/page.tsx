@@ -51,7 +51,7 @@ const Services = () => {
                                         initial={{ opacity: 0, y: -10 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.5 }}
-                                        className='absolute w-auto min-w-96 border-2 border-moggle bg-crema p-3 text-sm'>
+                                        className='absolute min-w-0 border-2 border-moggle bg-crema p-3 text-sm sm:min-w-96'>
                                         <li>6€ par photo supplémentaire.</li>
                                         <li>
                                             Seule, en couple ou en famille (5
