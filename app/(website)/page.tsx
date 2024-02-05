@@ -17,7 +17,7 @@ const Home = () => {
     return (
         <main>
             <Section
-                title='Shooting & Événements'
+                h1Title='Shooting & Événements'
                 subtitle='Capturez vos moments les plus précieux.'
                 buttonText='Réserver une Séance'
                 buttonLink='/contact'
@@ -52,7 +52,7 @@ const Home = () => {
                                     transition={{ duration: 0.5 }}
                                     className='border-3 border-moggle'>
                                     <Image
-                                    className='aspect-[3/4] object-cover'
+                                        className='aspect-[3/4] object-cover'
                                         src={src}
                                         alt={alt}
                                         priority
@@ -88,7 +88,7 @@ const Home = () => {
                             className='mx-6 flex flex-col gap-3 text-lg text-moggle xl:ml-0 xl:mr-10'>
                             <p>
                                 Hello, moi c&apos;est{' '}
-                                <strong>Déborah Tetea</strong>, maman de deux
+                                <strong>Déborah</strong>, maman de deux
                                 petits garçons.
                             </p>
                             <p>

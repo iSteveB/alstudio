@@ -25,7 +25,7 @@ const Services = () => {
         <div className='-z-10 flex flex-col'>
             <Section
                 id='prenancy'
-                title={'Grossesse'}
+                h1Title='Grossesse'
                 subtitle={
                     state.toggleCategoryA
                         ? undefined

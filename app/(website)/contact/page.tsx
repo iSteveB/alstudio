@@ -10,7 +10,7 @@ const Contact = () => {
         <div>
             <Section
                 title='Je souhaite'
-                subtitle='Réservez une séance.'
+                h1Subtitle='Réserver une séance photo.'
                 text={
                     <>
                         <p>
