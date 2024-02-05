@@ -1,16 +1,59 @@
+import '../globals.css';
+
 import type { Metadata } from 'next';
 import { amiko } from '../ui/font';
-import '../globals.css';
+import { Toaster } from 'react-hot-toast';
+
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Toaster } from 'react-hot-toast';
 import GoTopArrow from '../ui/svg/GoTopArrow';
 
-export const metadata: Metadata = {
-    title: 'AL Studio Photo',
-    description:
-        "Réalisez vos photos de grossesse, famille et d'événements avec une photographe professionnelle, capturant l'essence de moments précieux. Réservez votre séance maintenant pour un shooting mémorable.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+    return {
+      metadataBase: new URL("https://alstudiophotos.com"),
+      title: {
+        default: "AL Studio - Photographe grossesse, enfance, portrait et événement",
+        template: "%s | AL Studio Photo",
+      },
+      description:
+      "Photographe professionnelle capturant l'essence de moments précieux. Réservez une séance photo mémorable.",
+      authors: [
+        {
+          name: "AL Studio Photo",
+          url: "https://alstudiophotos.com",
+        },
+      ],
+      twitter: {
+        card: "summary_large_image",
+        title: "AL Studio - Photographe grossesse, enfance, portrait et événement",
+        description:"Photographe professionnelle capturant l'essence de moments précieux. Réservez une séance photo mémorable.",
+        images: "https://alstudiophotos.com/images/al_studio_banner.png",
+      },
+      robots: "index, follow",
+      alternates: {
+        canonical: `https://alstudiophotos.com`,
+        languages: {
+          "fr-FR": "/",
+        },
+      },
+      openGraph: {
+        type: "website",
+        url: `https://alstudiophotos.com`,
+        title: "AL Studio - Photographe grossesse, enfance, portrait et événement",
+        description: "Photographe professionnelle capturant l'essence de moments précieux. Réservez une séance photo mémorable.",
+        siteName: "AL Studio Photo",
+        images: [
+          {
+            url: "https://alstudiophotos.com/images/al_studio_banner.png",
+          },
+        ],
+      },
+      assets: "https://alstudiophotos.com/images/al_studio_banner.png",
+      keywords: [
+        "photographe professionnelle", "photos de grossesse", "séance photo famille", "shooting événementiel", "photographe portrait", "photographe enfant", "photographe mariage"
+      ],
+    };
+  }
 
 export default function RootLayout({
     children,
