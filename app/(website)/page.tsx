@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import pic from '@/public/images/DSC_0066.webp';
+import pic from '@/public/images/PhotoRoom-20230624_215432.webp';
 import pic2 from '@/public/images/MTXX_MR20231229_184426658.webp';
 import Section from '../components/Section';
 import Aside from '../components/Aside';
@@ -52,6 +52,7 @@ const Home = () => {
                                     transition={{ duration: 0.5 }}
                                     className='border-3 border-moggle'>
                                     <Image
+                                    className='aspect-[3/4] object-cover'
                                         src={src}
                                         alt={alt}
                                         priority
@@ -106,8 +107,7 @@ const Home = () => {
                                 maman louve, j&apos;apprécie capturer ces
                                 moments hors du temps. Quoi de plus beau que de
                                 mettre ces instants sur pause, que ce soit lors
-                                de{' '}
-                                <strong>cérémonies</strong>, de{' '}
+                                de <strong>cérémonies</strong>, de{' '}
                                 <strong>grossesses</strong> ou de{' '}
                                 <strong>naissances</strong> ? <br /> La
                                 photographie va bien au-delà de la simple{' '}

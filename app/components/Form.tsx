@@ -104,7 +104,7 @@ const Form = () => {
                 console.log('Message envoyé !');
             }
         } catch (error) {
-            console.log(error);
+            console.error({error});
             toast.error('Une erreur est survenue, veuillez réessayer.');
         }
     };

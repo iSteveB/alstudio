@@ -10,7 +10,6 @@ export default async function PhotoModal({
     params: { slug: string };
 }) {
     const picture: PictureData[] = await getPicture(photoId);
-    console.log(picture);
     return (
         <Modal>
             <PhotoCard photo={picture[0]} />
