@@ -3,6 +3,8 @@ import '../globals.css';
 import type { Metadata } from 'next';
 import { amiko } from '../ui/font';
 import { Toaster } from 'react-hot-toast';
+import { GoogleAnalytics } from '@next/third-parties/google'
+
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -63,6 +65,7 @@ export default function RootLayout({
 
     return (
         <html className='m-0 size-full' lang='fr'>
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS as string} />
             <body
                 className={`${amiko.className} flex h-full flex-col bg-crema`}>
                 <Toaster position='bottom-right' reverseOrder={true} />

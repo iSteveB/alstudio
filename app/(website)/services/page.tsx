@@ -13,7 +13,7 @@ import pregnancy from '@/public/images/DSC_0620.webp';
 import child from '@/public/images/MTXX_MR20231128_212011762.webp';
 import portrait from '@/public/images/MTXX_MR20231201_010133263.webp';
 import event from '@/public/images/1730877.webp';
-
+import { sendGAEvent } from '@next/third-parties/google';
 
 const Services = () => {
     const [state, dispatch] = useReducer(isOpenReducer, {
@@ -102,15 +102,36 @@ const Services = () => {
                                     Nouveau-né
                                 </h3>
                             </div>
-                            <form action='/contact'>
+                            <form
+                                action='/contact'
+                                onSubmit={() =>
+                                    sendGAEvent({
+                                        event: 'buttonClicked',
+                                        value: 'Grossesse Douceur',
+                                    })
+                                }>
                                 <Button text={'250 €'} type={'submit'} />
                             </form>
 
-                            <form action='/contact'>
+                            <form
+                                action='/contact'
+                                onSubmit={() =>
+                                    sendGAEvent({
+                                        event: 'buttonClicked',
+                                        value: 'Maman Détente',
+                                    })
+                                }>
                                 <Button text={'320 €'} type={'submit'} />
                             </form>
 
-                            <form action='/contact'>
+                            <form
+                                action='/contact'
+                                onSubmit={() =>
+                                    sendGAEvent({
+                                        event: 'buttonClicked',
+                                        value: 'Maman Détente + Nouveau-né',
+                                    })
+                                }>
                                 <Button text={'550 €'} type={'submit'} />
                             </form>
                         </motion.div>
@@ -218,15 +239,36 @@ const Services = () => {
                                     </motion.ul>
                                 </details>
                             </div>
-                            <form action='/contact'>
+                            <form
+                                action='/contact'
+                                onSubmit={() =>
+                                    sendGAEvent({
+                                        event: 'buttonClicked',
+                                        value: 'Nouveau-né',
+                                    })
+                                }>
                                 <Button text={'200 €'} type={'submit'} />
                             </form>
 
-                            <form action='/contact'>
+                            <form
+                                action='/contact'
+                                onSubmit={() =>
+                                    sendGAEvent({
+                                        event: 'buttonClicked',
+                                        value: 'Grand Enfant',
+                                    })
+                                }>
                                 <Button text={'220 €'} type={'submit'} />
                             </form>
 
-                            <form action='/contact'>
+                            <form
+                                action='/contact'
+                                onSubmit={() =>
+                                    sendGAEvent({
+                                        event: 'buttonClicked',
+                                        value: 'Special Enfant',
+                                    })
+                                }>
                                 <Button text={'150 €'} type={'submit'} />
                             </form>
                         </motion.div>
@@ -308,11 +350,25 @@ const Services = () => {
                                 </details>
                             </div>
 
-                            <form action='/contact'>
+                            <form
+                                action='/contact'
+                                onSubmit={() =>
+                                    sendGAEvent({
+                                        event: 'buttonClicked',
+                                        value: 'Portrait Solo',
+                                    })
+                                }>
                                 <Button text={'160 €'} type={'submit'} />
                             </form>
 
-                            <form action='/contact'>
+                            <form
+                                action='/contact'
+                                onSubmit={() =>
+                                    sendGAEvent({
+                                        event: 'buttonClicked',
+                                        value: 'Portrait Groupe',
+                                    })
+                                }>
                                 <Button text={'190 €'} type={'submit'} />
                             </form>
                         </motion.div>
@@ -362,13 +418,27 @@ const Services = () => {
                                         pièce montée.
                                     </p>
 
-                                    <form action='/contact'>
+                                    <form
+                                        action='/contact'
+                                        onSubmit={() =>
+                                            sendGAEvent({
+                                                event: 'buttonClicked',
+                                                value: 'Mariage 1',
+                                            })
+                                        }>
                                         <Button
                                             text={'550 €'}
                                             type={'submit'}
                                         />
                                     </form>
-                                    <form action='/contact'>
+                                    <form
+                                        action='/contact'
+                                        onSubmit={() =>
+                                            sendGAEvent({
+                                                event: 'buttonClicked',
+                                                value: 'Mariage 2',
+                                            })
+                                        }>
                                         <Button
                                             text={'1 000 €'}
                                             type={'submit'}
@@ -450,14 +520,28 @@ const Services = () => {
                                             </motion.ul>
                                         </details>
                                     </div>
-                                    <form action='/contact'>
+                                    <form
+                                        action='/contact'
+                                        onSubmit={() =>
+                                            sendGAEvent({
+                                                event: 'buttonClicked',
+                                                value: 'Baptême 1',
+                                            })
+                                        }>
                                         <Button
                                             text={'160 €'}
                                             type={'submit'}
                                         />
                                     </form>
 
-                                    <form action='/contact'>
+                                    <form
+                                        action='/contact'
+                                        onSubmit={() =>
+                                            sendGAEvent({
+                                                event: 'buttonClicked',
+                                                value: 'Baptême 2',
+                                            })
+                                        }>
                                         <Button
                                             text={'250 €'}
                                             type={'submit'}
