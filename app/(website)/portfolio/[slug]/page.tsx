@@ -7,20 +7,17 @@ export default async function Page({ params }: { params: { slug: string } }) {
     const picture: PictureData[] = await getPicture(params.slug);
 
     return (
-        <div>
-            {picture && (
-                <Modal>
-                    <Image
-                       
-                        src={picture[0].image.asset.url}
-                        alt={picture[0].image.alt}
-                        width={picture[0].image.asset.metadata.dimensions.width}
-                        height={picture[0].image.asset.metadata.dimensions.height}
-                        objectFit='cover'
-                        />
-                        
-                </Modal>
-            )}
-        </div>
+        
+        <Modal>
+            <Image
+                src={picture[0].image.asset.url}
+                alt={picture[0].image.alt}
+                width={picture[0].image.asset.metadata.dimensions.width}
+                height={picture[0].image.asset.metadata.dimensions.height}
+                objectFit='cover'
+                priority
+            />
+        </Modal>
+    
     );
 }

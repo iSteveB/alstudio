@@ -10,6 +10,7 @@ export default function PhotoCard({ photo }: { photo: PictureData }) {
                 width={photo.image.asset.metadata.dimensions.width}
                 height={photo.image.asset.metadata.dimensions.height}
                 className='aspect-auto max-h-screen w-full object-cover'
+                priority
             />
         </>
     );

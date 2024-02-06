@@ -15,6 +15,26 @@ const config: Config = {
       '2xl': '1536px'
     },
     extend: {
+      keyframes: {
+        'loader-before': {
+          '0%': { transform: 'none' },
+          '100%': { transform: 'none' },
+          '25%': { transform: 'translateX(100%)' },
+          '50%': { transform: 'translateX(100%) translateY(100%)' },
+          '75%': { transform: 'translateY(100%)' }
+        },
+        'loader-after': {
+          '0%': { transform: 'none' },
+          '100%': { transform: 'none' },
+          '25%': { transform: 'translateX(-100%)' },
+          '50%': { transform: 'translateX(-100%) translateY(-100%)' },
+          '75%': { transform: 'translateY(-100%)' }
+        }
+      },
+      animation: {
+        'loader-before': 'loader-before 2.4s cubic-bezier(0, 0, 0.24, 1.21) infinite',
+        'loader-after': 'loader-after 2.4s cubic-bezier(0, 0, 0.24, 1.21) infinite'
+      },
       backgroundColor: {
         crema: '#F4EBE2'
       },
