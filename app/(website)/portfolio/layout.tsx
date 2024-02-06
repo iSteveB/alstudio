@@ -1,4 +1,3 @@
-import './global.css';
 
 export default function PortfolioLayout(props: {
   children: React.ReactNode;
