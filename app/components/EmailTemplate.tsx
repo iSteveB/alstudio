@@ -58,8 +58,8 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
                         <Img
                             src={`${baseUrl}/images/alstudio.png`}
                             alt='AL Studio Banner'
-                            width={600}
-                            height={200}
+                            width={109}
+                            height={50}
                         />
                     </Section>
 
