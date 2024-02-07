@@ -15,6 +15,7 @@ const Footer = () => {
             </div>
             <Navigation tailwindCSS='flex flex-row justify-between gap-10' />
             <SocialNetwork tailwindcss='md:flex flex-row justify-between gap-10 hidden' />
+            
         </div>
     );
 };

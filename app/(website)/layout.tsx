@@ -3,8 +3,8 @@ import '../globals.css';
 import type { Metadata } from 'next';
 import { amiko } from '../ui/font';
 import { Toaster } from 'react-hot-toast';
-import { GoogleAnalytics } from '@next/third-parties/google'
-
+import Script from 'next/script';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -12,60 +12,70 @@ import GoTopArrow from '../ui/svg/GoTopArrow';
 
 export async function generateMetadata(): Promise<Metadata> {
     return {
-      metadataBase: new URL("https://alstudiophotos.com"),
-      title: {
-        default: "AL Studio - Photographe grossesse, enfance, portrait et événement",
-        template: "%s | AL Studio Photo",
-      },
-      description:
-      "Photographe professionnelle capturant l'essence de moments précieux. Réservez une séance photo mémorable.",
-      authors: [
-        {
-          name: "AL Studio Photo",
-          url: "https://alstudiophotos.com",
+        metadataBase: new URL('https://alstudiophotos.com'),
+        title: {
+            default:
+                'AL Studio - Photographe grossesse, enfance, portrait et événement',
+            template: '%s | AL Studio Photo',
         },
-      ],
-      twitter: {
-        card: "summary_large_image",
-        title: "AL Studio - Photographe grossesse, enfance, portrait et événement",
-        description:"Photographe professionnelle capturant l'essence de moments précieux. Réservez une séance photo mémorable.",
-        images: "https://alstudiophotos.com/images/al_studio_banner.png",
-      },
-      robots: "index, follow",
-      alternates: {
-        canonical: `https://alstudiophotos.com`,
-        languages: {
-          "fr-FR": "/",
-        },
-      },
-      openGraph: {
-        type: "website",
-        url: `https://alstudiophotos.com`,
-        title: "AL Studio - Photographe grossesse, enfance, portrait et événement",
-        description: "Photographe professionnelle capturant l'essence de moments précieux. Réservez une séance photo mémorable.",
-        siteName: "AL Studio Photo",
-        images: [
-          {
-            url: "https://alstudiophotos.com/images/al_studio_banner.png",
-          },
+        description:
+            "Photographe professionnelle capturant l'essence de moments précieux. Réservez une séance photo mémorable.",
+        authors: [
+            {
+                name: 'AL Studio Photo',
+                url: 'https://alstudiophotos.com',
+            },
         ],
-      },
-      assets: "https://alstudiophotos.com/images/al_studio_banner.png",
-      keywords: [
-        "photographe professionnelle", "photos de grossesse", "séance photo famille", "shooting événementiel", "photographe portrait", "photographe enfant", "photographe mariage"
-      ],
+        twitter: {
+            card: 'summary_large_image',
+            title: 'AL Studio - Photographe grossesse, enfance, portrait et événement',
+            description:
+                "Photographe professionnelle capturant l'essence de moments précieux. Réservez une séance photo mémorable.",
+            images: 'https://alstudiophotos.com/images/al_studio_banner.png',
+        },
+        robots: 'index, follow',
+        alternates: {
+            canonical: `https://alstudiophotos.com`,
+            languages: {
+                'fr-FR': '/',
+            },
+        },
+        openGraph: {
+            type: 'website',
+            url: `https://alstudiophotos.com`,
+            title: 'AL Studio - Photographe grossesse, enfance, portrait et événement',
+            description:
+                "Photographe professionnelle capturant l'essence de moments précieux. Réservez une séance photo mémorable.",
+            siteName: 'AL Studio Photo',
+            images: [
+                {
+                    url: 'https://alstudiophotos.com/images/al_studio_banner.png',
+                },
+            ],
+        },
+        assets: 'https://alstudiophotos.com/images/al_studio_banner.png',
+        keywords: [
+            'photographe professionnelle',
+            'photos de grossesse',
+            'séance photo famille',
+            'shooting événementiel',
+            'photographe portrait',
+            'photographe enfant',
+            'photographe mariage',
+        ],
     };
-  }
+}
 
 export default function RootLayout({
     children,
 }: {
     children: React.ReactNode;
 }) {
-
     return (
         <html className='m-0 size-full' lang='fr'>
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS as string} />
+            <GoogleAnalytics
+                gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS as string}
+            />
             <body
                 className={`${amiko.className} flex h-full flex-col bg-crema`}>
                 <Toaster position='bottom-right' reverseOrder={true} />
@@ -79,6 +89,18 @@ export default function RootLayout({
                     </div>
                 </div>
 
+                <Script id='consent-cookies'>
+                    {`window.axeptioSettings = {
+  clientId: "65c2b4756d2f59ad4139e270",
+  cookiesVersion: "al studio photos-fr-EU",
+};
+ 
+(function(d, s) {
+  var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
+  e.async = true; e.src = "//static.axept.io/sdk-slim.js";
+  t.parentNode.insertBefore(e, t);
+})(document, "script");`}
+                </Script>
                 <Footer />
             </body>
         </html>
