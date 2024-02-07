@@ -27,7 +27,7 @@ export async function POST(request: Request) {
     try {
       const { data, error } = await resend.emails.send({
         from: 'contact@alstudiophotos.com',
-        to: ['basse.steve@hotmail.com'],
+        to: ['a.l.studiophotos@gmail.com'],
         subject: objectTrad[object].charAt(0).toUpperCase() + objectTrad[object].slice(1),
         react: EmailTemplate({
             firstName: firstName,
