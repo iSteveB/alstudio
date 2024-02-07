@@ -91,7 +91,7 @@ export default function RootLayout({
 
                 <Script id='consent-cookies'>
                     {`window.axeptioSettings = {
-  clientId: "65c2b4756d2f59ad4139e270",
+  clientId: "${process.env.AXEPTIO_ID}",
   cookiesVersion: "al studio photos-fr-EU",
 };
  
