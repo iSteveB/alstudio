@@ -49,7 +49,7 @@ import React from 'react';
 
 const FAQ = () => {
     return (
-        <div className='flex justify-center items-center h-full border-b-3 border-moggle text-5xl'>
+        <div className='flex h-full items-center justify-center border-b-3 border-moggle text-5xl'>
             À venir...
         </div>
     );
