@@ -56,8 +56,10 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
                         <Img
                             src={`${baseUrl}/images/al_studio_banner.png`}
                             alt='AL Studio Banner'
-                            width={109}
-                            height={50}
+                            className='mx-auto my-20'
+                            width={200}
+                            height={100}
+                            
                         />
                     </Section>
 
@@ -139,6 +141,7 @@ const paragraph = {
 
 const logo = {
     padding: '30px 20px',
+    margin: '0 auto',
 };
 
 const content = {
