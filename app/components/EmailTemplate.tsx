@@ -36,9 +36,7 @@ const objectTrad: TradProps = {
     question: 'poser une question',
 };
 
-const baseUrl = process.env.VERCEL_URL
-  ? `${process.env.VERCEL_URL}`
-  : "";
+const baseUrl = "https://alstudiophotos.com"
 
 export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
     firstName,
