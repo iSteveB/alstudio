@@ -3,7 +3,7 @@ import React from 'react';
 
 const LegalMentions = () => {
     return (
-        <div className='flex flex-col gap-8 border-b-3 border-moggle px-32 py-20'>
+        <div className='flex flex-col gap-8 border-b-3 border-moggle px-16 py-10 md:px-32 md:py-20'>
             <div className='flex flex-col items-center'>
                 <h1 className='text-4xl'>MENTIONS LEGALES</h1>
                 <p>En vigueur au 01/01/2024</p>

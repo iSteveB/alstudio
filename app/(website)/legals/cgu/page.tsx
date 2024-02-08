@@ -3,7 +3,7 @@
 const CGU = () => {
     return (
         <div>
-            <div className='flex flex-col gap-8 border-b-3 border-moggle px-32 py-20'>
+            <div className='flex flex-col gap-8 border-b-3 border-moggle px-16 py-10 md:px-32 md:py-20'>
                 <div className='flex flex-col items-center gap-5'>
                     <h1 className='text-4xl uppercase'>
                         CONDITIONS GENERALES D&apos;UTILISATION
