@@ -87,7 +87,6 @@ export default function RootLayout({
                 <div className='mt-[112px] flex-1 scroll-smooth sm:mt-[130px]'>
                     {children}
                     <SpeedInsights />
-                    <Analytics />
                     <div className='fixed bottom-6 right-6'>
                         <GoTopArrow />
                     </div>
@@ -95,17 +94,18 @@ export default function RootLayout({
 
                 <Script id='consent-cookies'>
                     {`window.axeptioSettings = {
-  clientId: "${process.env.AXEPTIO_ID}",
-  cookiesVersion: "al studio photos-fr-EU",
-};
- 
-(function(d, s) {
-  var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
-  e.async = true; e.src = "//static.axept.io/sdk-slim.js";
-  t.parentNode.insertBefore(e, t);
-})(document, "script");`}
+                        clientId: "${process.env.AXEPTIO_ID}",
+                        cookiesVersion: "al studio photos-fr-EU",
+                    };
+                    
+                    (function(d, s) {
+                        var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
+                        e.async = true; e.src = "//static.axept.io/sdk-slim.js";
+                        t.parentNode.insertBefore(e, t);
+                    })(document, "script");`}
                 </Script>
                 <Footer />
+                <Analytics />
             </body>
         </html>
     );
