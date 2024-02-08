@@ -118,7 +118,7 @@ const Form = () => {
             <div className='mb-10 flex w-full flex-col gap-4 lg:mx-16 lg:my-6 lg:w-2/3'>
                 <div className='flex w-full flex-col gap-3 md:flex-row'>
                     <div className='w-full flex-col items-start'>
-                        <label htmlFor='lastName'>Nom</label>
+                        <label htmlFor='lastName' className='after:content-["*"]'>Nom</label>
                         <input
                             className='h-12 w-full border border-lion px-3 py-2 outline-none'
                             type='text'
@@ -135,7 +135,7 @@ const Form = () => {
                         />
                     </div>
                     <div className='w-full flex-col items-start'>
-                        <label htmlFor='firstName'>Prénom</label>
+                        <label htmlFor='firstName' className='after:content-["*"]'>Prénom</label>
                         <input
                             className='h-12 w-full border border-lion px-3 py-2 outline-none'
                             type='text'
@@ -154,7 +154,7 @@ const Form = () => {
                 </div>
 
                 <div className='flex flex-col items-start'>
-                    <label htmlFor='email'>Email</label>
+                    <label htmlFor='email' className='after:content-["*"]'>Email</label>
                     <input
                         type='email'
                         name='email'
@@ -169,7 +169,7 @@ const Form = () => {
                 </div>
 
                 <div>
-                    <label htmlFor='object'>Je souhaite </label>
+                    <label htmlFor='object' className='after:content-["*"]'>Je souhaite </label>
                     <select
                         className='h-12 w-full border border-lion px-3 py-2 outline-none'
                         name='object'
@@ -186,7 +186,7 @@ const Form = () => {
                     {booking === 'book' && (
                         <div>
                             <select
-                                className='h-12 w-full max-w-full border border-lion px-3 py-2 outline-none'
+                                className='h-12 w-full max-w-full border border-lion px-3 py-2 outline-none after:content-["*"]'
                                 name='packageType'
                                 id='packageType'
                                 onChange={(e) =>

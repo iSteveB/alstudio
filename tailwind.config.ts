@@ -39,7 +39,7 @@ const config: Config = {
         crema: '#F4EBE2'
       },
       colors: {
-        crema: '#F4EBE2',
+        crema: '#FDF2E9',
         white: '#FFFFFF',
         moggle: '#312920',
         beaver: '#8C7D69',
