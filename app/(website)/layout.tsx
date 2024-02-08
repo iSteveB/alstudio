@@ -77,10 +77,10 @@ export default function RootLayout({
             <GoogleAnalytics
                 gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS as string}
             />
-            <Analytics />
             <body
                 className={`${amiko.className} flex h-full flex-col bg-crema`}>
                 <Toaster position='bottom-right' reverseOrder={true} />
+                <Analytics />
                 <div className='fixed top-0 z-50 w-full'>
                     <Header />
                 </div>
