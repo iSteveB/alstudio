@@ -5,6 +5,7 @@ import { amiko } from '../ui/font';
 import { Toaster } from 'react-hot-toast';
 import Script from 'next/script';
 import { GoogleAnalytics } from '@next/third-parties/google';
+import { Analytics } from '@vercel/analytics/react';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -76,6 +77,7 @@ export default function RootLayout({
             <GoogleAnalytics
                 gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS as string}
             />
+            <Analytics />
             <body
                 className={`${amiko.className} flex h-full flex-col bg-crema`}>
                 <Toaster position='bottom-right' reverseOrder={true} />
