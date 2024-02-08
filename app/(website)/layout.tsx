@@ -6,6 +6,7 @@ import { Toaster } from 'react-hot-toast';
 import Script from 'next/script';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -80,12 +81,13 @@ export default function RootLayout({
             <body
                 className={`${amiko.className} flex h-full flex-col bg-crema`}>
                 <Toaster position='bottom-right' reverseOrder={true} />
-                <Analytics />
                 <div className='fixed top-0 z-50 w-full'>
                     <Header />
                 </div>
                 <div className='mt-[112px] flex-1 scroll-smooth sm:mt-[130px]'>
                     {children}
+                    <SpeedInsights />
+                    <Analytics />
                     <div className='fixed bottom-6 right-6'>
                         <GoTopArrow />
                     </div>
