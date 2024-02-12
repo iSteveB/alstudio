@@ -275,9 +275,7 @@ const Form = () => {
                         required
                     />
                     <label htmlFor='consent'>
-                        En cochant cette case, j&apos;accepte que mes données
-                        soient concervées et réutilisées afin de me contacter
-                        uniquement dans le cadre de ma demande.
+                    En cochant cette case, j&apos;accepte que mes données soient conservées et réutilisées afin de me contacter, et ce, uniquement dans le cadre de ma demande.
                     </label>
                 </div>
                 <div className='flex items-center justify-center'>

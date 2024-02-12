@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface IconsProps {
-    color?: '#8B7E69' | '#F4EBE2';
+    color: '#8B7E69' | '#F4EBE2';
 }
 
 const Instagram: React.FC<IconsProps> = ({ color = '#8B7E69' }) => {
