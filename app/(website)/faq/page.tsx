@@ -8,7 +8,7 @@ const FAQ = () => {
     const [openItem, setOpenItem] = useState<number | null>(null);
 
     return (
-        <div className='mt-20 flex flex-col items-center border-b-3 border-moggle px-32'>
+        <div className='mt-20 flex flex-col items-center border-b-3 border-moggle px-0 md:px-16 lg:px-32'>
             <h1 className='text-4xl'>F.A.Q.</h1>
 
             <div className='flex w-2/3 flex-col'>
