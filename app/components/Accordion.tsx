@@ -14,7 +14,7 @@ const Accordion = ({ isOpen, setIsOpen, title, text }: AccordionProps) => {
             <div
                 onClick={setIsOpen}
                 className='bg-moggle text-crema'>
-                <h2 className='m-0 border-t border-moggle'>
+                <h2 className='m-0 border-t-3 border-moggle'>
                     <button className=' flex w-full cursor-pointer appearance-none items-center border-none bg-none px-4 py-2 text-xl leading-8 outline-2 outline-offset-2 outline-transparent transition-all duration-300 ease-in-out hover:bg-crema hover:text-moggle'>
                         <span className='flex flex-1 text-left'>{title}</span>
                         <svg
