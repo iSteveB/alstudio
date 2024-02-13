@@ -23,7 +23,7 @@ export const getPictures = async () => {
                 }
             }
             `,
-            { revalidate: 5 }
+            {next: {revalidate: 60}}
         );
     } catch (error) {
         console.error(error);
