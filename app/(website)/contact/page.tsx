@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React from 'react';
 import Form from '../../components/Form';
 import Section from '../../components/Section';
@@ -31,9 +31,10 @@ const Contact = () => {
                                 action='https://instagram.com/alstudiophoto?igshid=NGVhN2U2NjQ0Yg=='
                                 target='_blank'>
                                 <Button
+                            
                                     text='Instagram'
                                     type='submit'
-                                    img={<Instagram color='#F4EBE2' />}
+                                    img={<Instagram color={2} />}
                                 />
                             </form>
                             <form
@@ -42,7 +43,7 @@ const Contact = () => {
                                 <Button
                                     text='TikTok'
                                     type='submit'
-                                    img={<Tiktok color='#F4EBE2' />}
+                                    img={<Tiktok color={2} />}
                                 />
                             </form>
                             <form
@@ -51,7 +52,7 @@ const Contact = () => {
                                 <Button
                                     text='Facebook'
                                     type='submit'
-                                    img={<Facebook color='#F4EBE2' />}
+                                    img={<Facebook color={2} />}
                                 />
                             </form>
                         </div>

@@ -17,7 +17,7 @@ const Button: React.FC<ButtonProps> = ({ text, type, img, handleClick }) => {
             whileHover={{ scale: 1.07 }}
             onClick={handleClick}
             type={type}
-            className={`${gabriela.className} flex items-center justify-center gap-3 border border-moggle bg-beaver px-3 py-4 uppercase text-crema hover:bg-crema hover:text-moggle`}>
+            className={`${gabriela.className} group flex items-center justify-center gap-3 border border-moggle bg-beaver px-3 py-4 uppercase text-crema hover:bg-crema hover:text-moggle`}>
             {img}
             {text}
         </motion.button>
