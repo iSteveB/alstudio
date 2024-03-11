@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AL Studio Photos 📸
 
-## Getting Started
+AL Studio Photos est un site vitrine conçu pour une photographe professionnelle, offrant une plateforme pour présenter son travail, ses offres et permettre aux clients potentiels de la contacter facilement.
 
-First, run the development server:
+![Static Badge](https://img.shields.io/badge/React-0A7EA4) 
+![Static Badge](https://img.shields.io/badge/Next.js-343434)
+![Static Badge](https://img.shields.io/badge/TailwindCSS-38BDF9)
+![Static Badge](https://img.shields.io/badge/Sanity-F03F2E)
+
+## Fonctionnalités 
+- Présentation du travail : Une galerie photo moderne et responsive permet aux visiteurs d'apprécier la qualité et la diversité des photos réalisées par la photographe.
+
+- Gestion de contenu facile : L'ajout et la suppression de photos sont gérés via une interface intuitive, facilitant ainsi la mise à jour régulière du portfolio.
+
+- Prise de contact simplifiée : Un formulaire de contact permet aux visiteurs de soumettre facilement leurs demandes de séance photo ou toute autre question.
+
+## Technologies utilisées 💻
+**Next.js** : Framework React utilisé pour le développement de l'application web, offrant un rendu côté serveur pour une meilleure performance et un meilleur référencement.
+
+**Tailwind CSS** : Framework CSS utilisé pour styler l'application, offrant une approche utility-first pour un développement rapide et une personnalisation facile.
+
+**Sanity** : Headless CMS utilisé pour la gestion du contenu, offrant une interface conviviale pour la mise à jour du portfolio et une intégration facile avec l'application Next.js.
+
+**Resend & React Email** : Outil utilisé pour la gestion des e-mails, permettant une communication efficace avec les clients potentiels.
+
+
+
+## Installation
+
+Installer mon projet:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  git clone https://github.com/iSteveB/alstudio.git
+
+  cd alstudio
+
+  npm install
+
+  npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Lancer l'application : 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+  npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Accéder à l'application: 
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+  http://localhost:3000
+```
