@@ -7,11 +7,11 @@ AL Studio Photos est un site vitrine conçu pour une photographe professionnelle
 ![Static Badge](https://img.shields.io/badge/Sanity-F03F2E)
 
 ## Fonctionnalités 
-- Présentation du travail : Une galerie photo moderne et responsive permet aux visiteurs d'apprécier la qualité et la diversité des photos réalisées par la photographe.
+- Présentation du travail : Une **galerie photo** moderne et responsive permet aux visiteurs d'apprécier la qualité et la diversité des photos réalisées par la photographe.
 
-- Gestion de contenu facile : L'ajout et la suppression de photos sont gérés via une interface intuitive, facilitant ainsi la mise à jour régulière du portfolio.
+- Gestion de contenu facile : L'ajout et la suppression de photos sont gérés via une **interface intuitive**, facilitant ainsi la mise à jour régulière du portfolio.
 
-- Prise de contact simplifiée : Un formulaire de contact permet aux visiteurs de soumettre facilement leurs demandes de séance photo ou toute autre question.
+- Prise de contact simplifiée : Un **formulaire de contact** permet aux visiteurs de soumettre facilement leurs demandes de séance photo ou toute autre question.
 
 ## Technologies utilisées 💻
 **Next.js** : Framework React utilisé pour le développement de l'application web, offrant un rendu côté serveur pour une meilleure performance et un meilleur référencement.
