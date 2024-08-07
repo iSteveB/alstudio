@@ -1,6 +1,6 @@
 # AL Studio Photos 📸
 
-AL Studio Photos est un site vitrine conçu pour une photographe professionnelle, offrant une plateforme pour présenter son travail, ses offres et permettre aux clients potentiels de la contacter facilement.
+AL Studio Photos est un portfolio conçu pour une photographe professionnelle, offrant une plateforme pour présenter son travail, ses offres et permettre aux clients potentiels de la contacter facilement.
 
 ![Static Badge](https://img.shields.io/badge/Next.js-343434)
 ![Static Badge](https://img.shields.io/badge/TailwindCSS-38BDF9)
