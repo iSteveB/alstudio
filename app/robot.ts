@@ -10,7 +10,7 @@ export default function robots(): MetadataRoute.Robots {
         },
         {
           userAgent: ['Applebot', 'Bingbot'],
-          disallow: ['/admin/'],
+          disallow: ['/admin/', '/legals/'],
         },
       ],
     sitemap: 'https://alstudiophotos.com/sitemap.xml',
